@@ -7,6 +7,14 @@ description: "関西在住のポポとモモの夫婦が財テクを駆使して
 # 使用するデザインテーマ
 remote_theme: mmistakes/minimal-mistakes
 
+# 利用プラグイン
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+
 # あなたのブログのURL（[ユーザー名]の部分をご自身のGitHubアカウント名に変更してください）
 url: "https://popomomo-ux.github.io/popomomo.github.io/"
 
