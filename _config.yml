@@ -25,7 +25,7 @@ author:
       url: "https://github.com/popomomo-ux"
     - label: "カテゴリー一覧"
       icon: "fas fa-fw fa-folder-open" # フォルダのアイコン
-      url: "/categories/"           # 作成したカテゴリーページのURL
+      url: "/popomomoblog/categories/"           # 作成したカテゴリーページのURL
 
 # 利用プラグイン
 plugins:
