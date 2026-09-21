@@ -2,10 +2,26 @@
 title: "チリも積もれば旅となる"
 
 # ブログの説明文（メタタグやテーマによってトップページ等に表示されます）
-description: "関西在住のポポとモモの夫婦が財テクを駆使して、旅を楽しむブログです"
+description: "関西在住のぽぽとももの夫婦が財テクを駆使して、旅を楽しむブログです"
 
 # 使用するデザインテーマ
 remote_theme: mmistakes/minimal-mistakes
+
+# スキンの選択（カラーテーマ）
+# 選択肢: "default", "air", "aqua", "contrast", "dark", "neon", "mint", "sunrise" など
+minimal_mistakes_skin: "air"
+
+# 言語設定（日付の表示などを日本語にするため）
+locale: "ja-JP"
+
+# サイドバーに表示するプロフィール設定
+author:
+  name   : "ぽぽ"
+  bio    : "夫婦が財テクを駆使して旅を楽しむブログです。"
+  # avatar : "/assets/images/biophoto.jpg" # 顔写真やアイコン画像を使う場合
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
 
 # 利用プラグイン
 plugins:
