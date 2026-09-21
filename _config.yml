@@ -28,7 +28,7 @@ author:
       url: "/popomomoblog/categories/"           # 作成したカテゴリーページのURL
     - label: "サイト内検索"
       icon: "fas fa-fw fa-search"
-      url: "/リポジトリ名/search/"
+      url: "/popomomoblog/search/"
 
 # 利用プラグイン
 plugins:
