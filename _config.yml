@@ -5,7 +5,7 @@ title: "チリも積もれば旅となる"
 description: "関西在住のポポとモモの夫婦が財テクを駆使して、旅を楽しむブログです"
 
 # 使用するデザインテーマ（定番の「minima」を指定）
-theme: minima
+theme: Minimal Mistakes
 
 # あなたのブログのURL（[ユーザー名]の部分をご自身のGitHubアカウント名に変更してください）
 url: "https://popomomo-ux.github.io/popomomo.github.io/"
