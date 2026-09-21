@@ -22,6 +22,7 @@ author:
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
+      url: "https://github.com/popomomo-ux"
 
 # 利用プラグイン
 plugins:
