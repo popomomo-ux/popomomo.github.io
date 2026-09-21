@@ -26,6 +26,9 @@ author:
     - label: "カテゴリー一覧"
       icon: "fas fa-fw fa-folder-open" # フォルダのアイコン
       url: "/popomomoblog/categories/"           # 作成したカテゴリーページのURL
+    - label: "サイト内検索"
+      icon: "fas fa-fw fa-search"
+      url: "/リポジトリ名/search/"
 
 # 利用プラグイン
 plugins:
