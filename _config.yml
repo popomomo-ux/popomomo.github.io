@@ -47,3 +47,7 @@ defaults:
       path: ""
     values:
       author_profile: true
+
+# 検索機能の設定
+search: true
+search_provider: "lunr"
