@@ -23,7 +23,7 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/popomomo-ux"
-  - label: "カテゴリー一覧"
+    - label: "カテゴリー一覧"
       icon: "fas fa-fw fa-folder-open" # フォルダのアイコン
       url: "/categories/"           # 作成したカテゴリーページのURL
 
