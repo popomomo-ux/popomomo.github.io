@@ -52,5 +52,5 @@ defaults:
       author_profile: true
 
 # 検索機能の設定
-search: true
+search: false
 search_provider: "lunr"
