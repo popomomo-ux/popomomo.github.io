@@ -20,9 +20,9 @@ author:
   bio    : "夫婦が財テクを駆使して旅を楽しむブログです。"
   # avatar : "/assets/images/biophoto.jpg" # 顔写真やアイコン画像を使う場合
   links:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/popomomo-ux"
+    # - label: "GitHub"
+    #   icon: "fab fa-fw fa-github"
+    #   url: "https://github.com/popomomo-ux"
     - label: "カテゴリー一覧"
       icon: "fas fa-fw fa-folder-open" # フォルダのアイコン
       url: "/popomomoblog/categories/"           # 作成したカテゴリーページのURL
