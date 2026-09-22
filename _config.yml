@@ -18,7 +18,7 @@ locale: "ja-JP"
 author:
   name   : "ぽぽ"
   bio    : "夫婦が節約と財テクを駆使して旅を楽しむブログです。"
-  url    : "/popomomoblog/status/"
+  uri    : "/popomomoblog/status/"
   # avatar : "/assets/images/biophoto.jpg" # 顔写真やアイコン画像を使う場合
   links:
     - label: "HOME"
