@@ -27,9 +27,10 @@ author:
       icon: "fas fa-fw fa-folder-open" # フォルダのアイコン
       url: "/popomomoblog/categories/"           # 作成したカテゴリーページのURL
     - label: "タグ一覧"
-      icon: "fas fa-fw fa-map" # フォルダのアイコン
+      icon: "fas fa-fw fa-tag" # フォルダのアイコン
       url: "/popomomoblog/tags/"           # 作成したタグページのURL
     - title: "マップ"
+      icon: "fas fa-fw fa-compass" # フォルダのアイコン
       url: "/popomomoblog/map/"
     - label: "サイト内検索"
       icon: "fas fa-fw fa-search"
