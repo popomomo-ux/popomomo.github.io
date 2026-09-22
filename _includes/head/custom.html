@@ -1,0 +1,68 @@
+<style>
+  /* 読書進捗バーのスタイル */
+  #reading-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: #0366d6;
+    width: 0%;
+    z-index: 9999;
+    transition: width 0.1s ease;
+  }
+  /* トップへ戻るボタンのスタイル */
+  #back-to-top {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: #24292e;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(10px);
+    z-index: 999;
+    font-size: 14px;
+  }
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // 1. 読書進捗バーを自動生成してページに追加
+  const progress = document.createElement("div");
+  progress.id = "reading-progress";
+  document.body.appendChild(progress);
+
+  window.addEventListener("scroll", () => {
+    const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    progress.style.width = scrolled + "%";
+  });
+
+  // 2. トップへ戻るボタンを自動生成してページに追加
+  const btn = document.createElement("button");
+  btn.id = "back-to-top";
+  btn.innerHTML = "▲";
+  btn.title = "トップへ戻る";
+  document.body.appendChild(btn);
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      btn.style.opacity = "1";
+      btn.style.transform = "translateY(0)";
+    } else {
+      btn.style.opacity = "0";
+      btn.style.transform = "translateY(10px)";
+    }
+  });
+
+  btn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+});
+</script>
