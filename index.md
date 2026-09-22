@@ -1,6 +1,7 @@
 ---
 layout: home
-title: ""
+author_profile: true
+entries_layout: grid
 ---
 ## ようこそ！
 気になったことを書いていきます。
