@@ -18,12 +18,14 @@ locale: "ja-JP"
 author:
   name   : "ぽぽ"
   bio    : "夫婦が節約と財テクを駆使して旅を楽しむブログです。"
-  uri    : "/popomomoblog/status/"
   # avatar : "/assets/images/biophoto.jpg" # 顔写真やアイコン画像を使う場合
   links:
     - label: "HOME"
       icon: "fas fa-house"
       url: "/popomomoblog/"
+    - label: "ステータス"
+      icon: "fas fa-fist-raised"
+      url: "/popomomoblog/status/"
     - label: "カテゴリー一覧"
       icon: "fas fa-fw fa-folder-open" # フォルダのアイコン
       url: "/popomomoblog/categories/"
