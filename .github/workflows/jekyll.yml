@@ -1,0 +1,15 @@
+name: Deploy Jekyll to GitHub Pages
+
+on:
+  push:
+    branches: ["main"] # または "master"
+
+# ↓ ここに id-token: write を追加します
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    # 以下のビルド処理が続きます...
