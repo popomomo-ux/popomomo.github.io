@@ -28,10 +28,10 @@ author:
       url: "/popomomoblog/categories/"           # 作成したカテゴリーページのURL
     - label: "タグ一覧"
       icon: "fas fa-fw fa-tag" # フォルダのアイコン
-      url: "/tags/"          
+      url: "/popomomoblog/tags/"          
     - label: "マップ"
       icon: "fas fa-fw fa-compass" # フォルダのアイコン
-      url: "/map/"
+      url: "/popomomoblog/map/"
     - label: "サイト内検索"
       icon: "fas fa-fw fa-search"
       url: "/popomomoblog/search/"
