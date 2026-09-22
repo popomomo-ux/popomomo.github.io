@@ -53,7 +53,9 @@ baseurl: "/popomomoblog"
 defaults:
   - scope:
       path: ""
+      type: "posts"
     values:
+    　layout: "single"
       author_profile: true
 
 # 検索機能の設定
