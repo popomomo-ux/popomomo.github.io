@@ -1,8 +1,8 @@
 ---
 layout: single
-title: "行きたい場所マップ"
+title: "行ってよかった場所と行きたい場所マップ"
 permalink: /map/
-author_profile: false
+author_profile: true
 ---
 
 <div id="blog-map"></div>
