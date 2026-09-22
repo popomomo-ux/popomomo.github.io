@@ -10,3 +10,25 @@ window.addEventListener('scroll', () => {
   document.getElementById('reading-progress').style.width = scrolled + '%';
 });
 </script>
+
+<!-- ボタンのHTML -->
+<button id="back-to-top" style="position: fixed; bottom: 24px; right: 24px; background: #24292e; color: white; border: none; padding: 10px 14px; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.2); opacity: 0; transition: opacity 0.3s ease, transform 0.3s ease; transform: translateY(10px); z-index: 999; font-size: 14px;" title="トップへ戻る">▲</button>
+
+<!-- 制御用JavaScript -->
+<script>
+const backToTopBtn = document.getElementById('back-to-top');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    backToTopBtn.style.opacity = '1';
+    backToTopBtn.style.transform = 'translateY(0)';
+  } else {
+    backToTopBtn.style.opacity = '0';
+    backToTopBtn.style.transform = 'translateY(10px)';
+  }
+});
+
+backToTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
