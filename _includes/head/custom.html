@@ -11,7 +11,7 @@
     transition: width 0.1s ease;
   }
   
-  /* トップへ戻るボタンのベーススタイル（非表示時） */
+  /* トップへ戻るボタンのスタイル */
   #back-to-top {
     position: fixed;
     bottom: 24px;
@@ -24,9 +24,9 @@
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     opacity: 0;
-    visibility: hidden;
+    pointer-events: none; /* 非表示時はクリックできないようにする */
     transform: translateY(10px);
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease;
     z-index: 999;
     font-size: 14px;
   }
@@ -34,7 +34,7 @@
   /* 表示状態のクラス */
   #back-to-top.show {
     opacity: 1;
-    visibility: visible;
+    pointer-events: auto; /* 表示時はクリック可能にする */
     transform: translateY(0);
   }
 </style>
@@ -60,16 +60,16 @@ document.addEventListener("DOMContentLoaded", () => {
   btn.title = "トップへ戻る";
   document.body.appendChild(btn);
 
-  // 表示・非表示を切り替える関数
+  // 表示・非表示を切り替える関数（しきい値を 100px にして出やすくしています）
   const toggleButton = () => {
-    if (window.scrollY > 300) {
+    if (window.scrollY > 100) {
       btn.classList.add("show");
     } else {
       btn.classList.remove("show");
     }
   };
 
-  // スクロール時およびページ読み込み時にも判定
+  // スクロール時およびページ読み込み時に判定
   window.addEventListener("scroll", toggleButton);
   toggleButton();
 
