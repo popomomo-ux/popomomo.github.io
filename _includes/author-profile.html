@@ -1,0 +1,13 @@
+<div class="author__content">
+  <h3 class="author__name" itemprop="name">
+    <!-- 名前自体に直接プロフィールページのパスを指定する -->
+    <a href="{{ '/popomomoblog//status/' | relative_url }}" itemprop="url" rel="nofollow">
+      {{ author.name }}
+    </a>
+  </h3>
+  {% if author.bio %}
+    <div class="author__bio" itemprop="description">
+      <p>{{ author.bio }}</p>
+    </div>
+  {% endif %}
+</div>
