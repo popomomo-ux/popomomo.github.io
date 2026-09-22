@@ -2,7 +2,7 @@ main:
   - title: "ホーム"
     url: /
   - title: "カテゴリー"
-    url: /popomomoblog/categories/
+    url: /categories/
     # 子メニューを持たせる場合
     children:
       - title: "自己紹介"
