@@ -12,7 +12,6 @@ author_profile: false
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <style>
-  /* 地図を画面いっぱいに広く、見やすく表示するスタイル */
   #blog-map {
     width: 100%;
     height: 600px;
@@ -74,50 +73,5 @@ document.addEventListener("DOMContentLoaded", () => {
     iconAnchor: [17, 17]
   });
   L.marker([34.7058, 135.4891], { icon: hotelIcon }).addTo(map).bindPopup("<b>ホテル</b><br>宿泊先候補");
-});
-</script>
-
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  // 1. 初期表示の中心を「大阪駅」に設定（ズーム倍率: 14）
-  const map = L.map('blog-map').setView([34.7024, 135.4959], 14);
-
-  // 2. 地図のタイルデザインを読み込み
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-  }).addTo(map);
-
-  // 3. マーカー（ピン）の追加
-  // 青：#0366d6
-  // 水色：#40a9ff
-  // 赤：#ff4d4f
-  // 緑：#52c41a
-  // オレンジ：#fa8c16
-  
-  // 大阪駅
-  L.circleMarker([34.7024, 135.4959], {
-    color: '#ff4d4f',      // 枠線の色
-    fillColor: '#ff4d4f',  // 塗りつぶしの色
-    fillOpacity: 0.8,      // 不透明度
-    radius: 10             // 大きさ
-  }).addTo(map).bindPopup("<b>大阪駅</b><br>ここが中心地点です");
-
-  // グランフロント大阪の例
-  L.circleMarker([34.7026, 135.4947], {
-    color: '#1890ff',
-    fillColor: '#1890ff',
-    fillOpacity: 0.8,
-    radius: 10
-  }).addTo(map).bindPopup("<b>グランフロント大阪</b><br>ショッピングやカフェ");
-
-  // 梅田スカイビルの例
-  L.circleMarker([34.7058, 135.4891], {
-    color: '#52c41a',
-    fillColor: '#52c41a',
-    fillOpacity: 0.8,
-    radius: 10
-  }).addTo(map).bindPopup("<b>梅田スカイビル</b><br>空中庭園展望台");
 });
 </script>
