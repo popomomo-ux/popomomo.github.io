@@ -2,7 +2,7 @@
 layout: single
 title: "行きたい・行った場所マップ"
 permalink: /map/
-author_profile: false
+author_profile: true
 ---
 
 
@@ -14,7 +14,7 @@ author_profile: false
     <button class="filter-btn category-btn" data-category="spot">観光</button>
     <button class="filter-btn category-btn" data-category="cafe">カフェ</button>
     <button class="filter-btn category-btn" data-category="hotel">ホテル</button>
-    <button class="filter-btn category-btn" data-category="gourmet">グルメ</button>****
+    <button class="filter-btn category-btn" data-category="gourmet">グルメ</button>
   </div>
 </div>
 
