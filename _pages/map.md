@@ -4,14 +4,29 @@ title: "行ってよかった場所と行きたい場所マップ"
 permalink: /map/
 author_profile: true
 ---
+<!-- フィルター用のボタンエリア -->
+<div id="map-filters">
+  <button class="filter-btn active" data-category="all">すべて</button>
+  <button class="filter-btn" data-category="spot">観光</button>
+  <button class="filter-btn" data-category="cafe">カフェ</button>
+  <button class="filter-btn" data-category="hotel">ホテル</button>
+</div>
 
 <div id="blog-map"></div>
-
 <!-- Leaflet CSS & JS の読み込み -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <style>
+  <!-- フィルター用のボタンエリア -->
+  <div id="map-filters">
+  <button class="filter-btn active" data-category="all">すべて</button>
+  <button class="filter-btn" data-category="spot">観光</button>
+  <button class="filter-btn" data-category="cafe">カフェ</button>
+  <button class="filter-btn" data-category="hotel">ホテル</button>
+  </div>
+  
+  /* 地図のスタイル */
   #blog-map {
     width: 100%;
     height: 600px;
@@ -86,31 +101,64 @@ document.addEventListener("DOMContentLoaded", () => {
   //#595959 （ダークグレー ※あまり目立たせたくない一般的なピンに）
 
   
-  // --- 1. 観光・お出かけ用アイコンピン（例：カメラ） ---
+ // アイコンの定義
   const spotIcon = L.divIcon({
     className: 'custom-pin',
     html: '<div class="pin-circle" style="background-color: #ff4d4f;"><i class="fas fa-camera"></i></div>',
     iconSize: [34, 34],
     iconAnchor: [17, 17]
   });
-  L.marker([34.7024, 135.4959], { icon: spotIcon }).addTo(map).bindPopup("<b>大阪駅</b><br>観光スポット");
 
-  // --- 2. グルメ・カフェ用アイコンピン（例：コーヒーカップ） ---
   const cafeIcon = L.divIcon({
     className: 'custom-pin',
     html: '<div class="pin-circle" style="background-color: #fa8c16;"><i class="fas fa-coffee"></i></div>',
     iconSize: [34, 34],
     iconAnchor: [17, 17]
   });
-  L.marker([34.7026, 135.4947], { icon: cafeIcon }).addTo(map).bindPopup("<b>カフェ</b><br>美味しいコーヒーのお店");
 
-  // --- 3. ホテル・宿泊用アイコンピン（例：ベッド） ---
   const hotelIcon = L.divIcon({
     className: 'custom-pin',
     html: '<div class="pin-circle" style="background-color: #1890ff;"><i class="fas fa-bed"></i></div>',
     iconSize: [34, 34],
     iconAnchor: [17, 17]
   });
-  L.marker([34.7058, 135.4891], { icon: hotelIcon }).addTo(map).bindPopup("<b>ホテル</b><br>宿泊先候補");
+
+  // すべてのスポットデータ（ここに場所を追加していきます）
+  const locations = [
+    { lat: 34.7024, lng: 135.4959, category: 'spot', icon: spotIcon, popup: '<b>大阪駅</b><br>観光スポット' },
+    { lat: 34.7026, lng: 135.4947, category: 'cafe', icon: cafeIcon, popup: '<b>カフェ</b><br>美味しいコーヒーのお店' },
+    { lat: 34.7058, lng: 135.4891, category: 'hotel', icon: hotelIcon, popup: '<b>ホテル</b><br>宿泊先候補' }
+  ];
+
+  let currentMarkers = [];
+
+  // マップにピンを描画する関数
+  function updateMarkers(category) {
+    // 既存のピンを削除
+    currentMarkers.forEach(marker => map.removeLayer(marker));
+    currentMarkers = [];
+
+    // 条件に合うピンを追加
+    locations.forEach(loc => {
+      if (category === 'all' || loc.category === category) {
+        const marker = L.marker([loc.lat, loc.lng], { icon: loc.icon })
+          .addTo(map)
+          .bindPopup(loc.popup);
+        currentMarkers.push(marker);
+      }
+    });
+  }
+
+  // 初期表示（すべて表示）
+  updateMarkers('all');
+
+  // ボタンのクリックイベント設定
+  document.querySelectorAll('.filter-btn').forEach(button => {
+    button.addEventListener('click', (e) => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      e.target.classList.add('active');
+      updateMarkers(e.target.getAttribute('data-category'));
+    });
+  });
 });
 </script>
