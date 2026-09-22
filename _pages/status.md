@@ -9,7 +9,7 @@ author_profile: true
 <div class="rpg-status-card">
   <div class="rpg-header">
     <h3>冒険者のステータス</h3>
-    <span class="rpg-level">Lv. 35</span>
+    <span class="rpg-level">Lv. 18</span>
   </div>
   
   <div class="rpg-body">
