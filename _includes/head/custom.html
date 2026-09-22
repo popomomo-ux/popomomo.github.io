@@ -10,7 +10,7 @@
     z-index: 9999;
     transition: width 0.1s ease;
   }
-  /* トップへ戻るボタンのスタイル（常時表示テスト用） */
+  /* トップへ戻るボタンのスタイル（アニメーション付き） */
   #back-to-top {
     position: fixed;
     bottom: 24px;
@@ -22,7 +22,9 @@
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    opacity: 1; /* ← 最初から表示させる */
+    opacity: 0; /* 最初は非表示 */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(10px); /* 少し下から浮き出る準備 */
     z-index: 999;
     font-size: 14px;
   }
@@ -49,6 +51,18 @@ document.addEventListener("DOMContentLoaded", () => {
   btn.title = "トップへ戻る";
   document.body.appendChild(btn);
 
+  // 300px以上スクロールしたときにふわっと表示
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      btn.style.opacity = "1";
+      btn.style.transform = "translateY(0)";
+    } else {
+      btn.style.opacity = "0";
+      btn.style.transform = "translateY(10px)";
+    }
+  });
+
+  // クリックしたらスムーズにトップへ戻る
   btn.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
