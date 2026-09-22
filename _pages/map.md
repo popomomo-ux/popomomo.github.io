@@ -1,67 +1,9 @@
 ---
 layout: single
-title: "行ってよかった場所と行きたい場所マップ"
+title: "行きたい・行った場所マップ"
 permalink: /map/
-author_profile: true
+author_profile: false
 ---
-<!-- フィルター用のボタンエリア -->
-<div id="map-filters">
-  <button class="filter-btn active" data-category="all">すべて</button>
-  <button class="filter-btn" data-category="spot">観光</button>
-  <button class="filter-btn" data-category="cafe">カフェ</button>
-  <button class="filter-btn" data-category="hotel">ホテル</button>
-</div>
-
-<div id="blog-map"></div>
-<!-- Leaflet CSS & JS の読み込み -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-<style>
-  <!-- フィルター用のボタンエリア -->
-  <div id="map-filters">
-  <button class="filter-btn active" data-category="all">すべて</button>
-  <button class="filter-btn" data-category="spot">観光</button>
-  <button class="filter-btn" data-category="cafe">カフェ</button>
-  <button class="filter-btn" data-category="hotel">ホテル</button>
-  </div>
-  
-  /* 地図のスタイル */
-  #blog-map {
-    width: 100%;
-    height: 600px;
-    border-radius: 8px;
-    margin: 20px 0;
-    z-index: 1;
-  }
-  /* アイコンピンの見た目を整えるCSS */
-  .custom-pin {
-    background: transparent;
-    border: none;
-  }
-  .pin-circle {
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 14px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
-    border: 2px solid white;
-  }
-</style>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const map = L.map('blog-map').setView([34.7024, 135.4959], 14);
-
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-  }).addTo(map);
-
   //アイコン一覧
   //頻出
   //カメラ: fas fa-camera
@@ -100,48 +42,162 @@ document.addEventListener("DOMContentLoaded", () => {
   // モノトーン系（通常ピン・控えめなスポット）
   //#595959 （ダークグレー ※あまり目立たせたくない一般的なピンに）
 
-  
- // アイコンの定義
-  const spotIcon = L.divIcon({
-    className: 'custom-pin',
-    html: '<div class="pin-circle" style="background-color: #ff4d4f;"><i class="fas fa-camera"></i></div>',
-    iconSize: [34, 34],
-    iconAnchor: [17, 17]
-  });
+<!-- フィルターグループ1：カテゴリ -->
+<div class="filter-section">
+  <span class="filter-label">カテゴリ:</span>
+  <div class="filter-buttons" id="category-filters">
+    <button class="filter-btn category-btn active" data-category="all">すべて</button>
+    <button class="filter-btn category-btn" data-category="spot">観光</button>
+    <button class="filter-btn category-btn" data-category="cafe">カフェ</button>
+    <button class="filter-btn category-btn" data-category="hotel">ホテル</button>
+  </div>
+</div>
 
-  const cafeIcon = L.divIcon({
-    className: 'custom-pin',
-    html: '<div class="pin-circle" style="background-color: #fa8c16;"><i class="fas fa-coffee"></i></div>',
-    iconSize: [34, 34],
-    iconAnchor: [17, 17]
-  });
+<!-- フィルターグループ2：ステータス（行きたい / 行った） -->
+<div class="filter-section" style="margin-top: 8px;">
+  <span class="filter-label">状態:</span>
+  <div class="filter-buttons" id="status-filters">
+    <button class="filter-btn status-btn active" data-status="all">すべて</button>
+    <button class="filter-btn status-btn" data-status="want">行きたい</button>
+    <button class="filter-btn status-btn" data-status="visited">行った</button>
+  </div>
+</div>
 
-  const hotelIcon = L.divIcon({
-    className: 'custom-pin',
-    html: '<div class="pin-circle" style="background-color: #1890ff;"><i class="fas fa-bed"></i></div>',
-    iconSize: [34, 34],
-    iconAnchor: [17, 17]
-  });
+<div id="blog-map"></div>
 
-  // すべてのスポットデータ（ここに場所を追加していきます）
+<!-- Leaflet CSS & JS の読み込み -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<style>
+  /* フィルターのレイアウト */
+  .filter-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+  }
+  .filter-label {
+    font-weight: bold;
+    font-size: 13px;
+    color: #555;
+    min-width: 60px;
+  }
+  .filter-buttons {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .filter-btn {
+    padding: 5px 12px;
+    border: 1px solid #d9d9d9;
+    background: #fff;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.2s;
+  }
+  .filter-btn:hover {
+    border-color: #1890ff;
+    color: #1890ff;
+  }
+  .filter-btn.active {
+    background: #1890ff;
+    color: #fff;
+    border-color: #1890ff;
+  }
+
+  /* 地図のスタイル */
+  #blog-map {
+    width: 100%;
+    height: 600px;
+    border-radius: 8px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    z-index: 1;
+  }
+  .custom-pin {
+    background: transparent;
+    border: none;
+  }
+  .pin-circle {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+    border: 2px solid white;
+  }
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const map = L.map('blog-map').setView([34.7024, 135.4959], 14);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
+
+  // --- アイコンを自動生成する関数 ---
+  // ステータスで色（行きたい=赤, 行った=緑）、カテゴリでアイコンの形を決める
+  function createPinIcon(category, status) {
+    const color = (status === 'want') ? '#ff4d4f' : '#52c41a'; // 行きたい: 赤, 行った: 緑
+    
+    let iconClass = 'fas fa-map-marker-alt';
+    if (category === 'spot') iconClass = 'fas fa-camera';
+    else if (category === 'cafe') iconClass = 'fas fa-coffee';
+    else if (category === 'hotel') iconClass = 'fas fa-bed';
+
+    return L.divIcon({
+      className: 'custom-pin',
+      html: `<div class="pin-circle" style="background-color: ${color};"><i class="${iconClass}"></i></div>`,
+      iconSize: [34, 34],
+      iconAnchor: [17, 17]
+    });
+  }
+
+  // --- スポットデータ一覧 ---
   const locations = [
-    { lat: 34.7024, lng: 135.4959, category: 'spot', icon: spotIcon, popup: '<b>大阪駅</b><br>観光スポット' },
-    { lat: 34.7026, lng: 135.4947, category: 'cafe', icon: cafeIcon, popup: '<b>カフェ</b><br>美味しいコーヒーのお店' },
-    { lat: 34.7058, lng: 135.4891, category: 'hotel', icon: hotelIcon, popup: '<b>ホテル</b><br>宿泊先候補' }
+    { 
+      lat: 34.7024, lng: 135.4959, 
+      category: 'spot', status: 'want', 
+      popup: '<b>大阪駅</b><br><span style="color:#ff4d4f;">【行きたい・観光】</span>' 
+    },
+    { 
+      lat: 34.7026, lng: 135.4947, 
+      category: 'cafe', status: 'want', 
+      popup: '<b>おしゃれカフェ</b><br><span style="color:#ff4d4f;">【行きたい・カフェ】</span>' 
+    },
+    { 
+      lat: 34.7058, lng: 135.4891, 
+      category: 'hotel', status: 'visited', 
+      popup: '<b>宿泊したホテル</b><br><span style="color:#52c41a;">【行った・ホテル】</span>' 
+    }
   ];
 
+  let currentCategory = 'all';
+  let currentStatus = 'all';
   let currentMarkers = [];
 
-  // マップにピンを描画する関数
-  function updateMarkers(category) {
-    // 既存のピンを削除
+  // マップのピンを更新する関数（AND条件でフィルタリング）
+  function updateMarkers() {
     currentMarkers.forEach(marker => map.removeLayer(marker));
     currentMarkers = [];
 
-    // 条件に合うピンを追加
     locations.forEach(loc => {
-      if (category === 'all' || loc.category === category) {
-        const marker = L.marker([loc.lat, loc.lng], { icon: loc.icon })
+      const matchCategory = (currentCategory === 'all' || loc.category === currentCategory);
+      const matchStatus = (currentStatus === 'all' || loc.status === currentStatus);
+
+      // 両方の条件に一致する場合のみピンを表示 (AND条件)
+      if (matchCategory && matchStatus) {
+        const icon = createPinIcon(loc.category, loc.status);
+        const marker = L.marker([loc.lat, loc.lng], { icon: icon })
           .addTo(map)
           .bindPopup(loc.popup);
         currentMarkers.push(marker);
@@ -149,15 +205,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 初期表示（すべて表示）
-  updateMarkers('all');
+  // 初期表示
+  updateMarkers();
 
-  // ボタンのクリックイベント設定
-  document.querySelectorAll('.filter-btn').forEach(button => {
+  // カテゴリボタンのイベント
+  document.querySelectorAll('.category-btn').forEach(button => {
     button.addEventListener('click', (e) => {
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
       e.target.classList.add('active');
-      updateMarkers(e.target.getAttribute('data-category'));
+      currentCategory = e.target.getAttribute('data-category');
+      updateMarkers();
+    });
+  });
+
+  // ステータスボタンのイベント
+  document.querySelectorAll('.status-btn').forEach(button => {
+    button.addEventListener('click', (e) => {
+      document.querySelectorAll('.status-btn').forEach(b => b.classList.remove('active'));
+      e.target.classList.add('active');
+      currentStatus = e.target.getAttribute('data-status');
+      updateMarkers();
     });
   });
 });
