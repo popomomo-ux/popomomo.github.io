@@ -14,6 +14,7 @@ author_profile: false
     <button class="filter-btn category-btn" data-category="spot">観光</button>
     <button class="filter-btn category-btn" data-category="cafe">カフェ</button>
     <button class="filter-btn category-btn" data-category="hotel">ホテル</button>
+    <button class="filter-btn category-btn" data-category="gourmet">グルメ</button>****
   </div>
 </div>
 
@@ -155,6 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (category === 'spot') iconClass = 'fas fa-camera';
     else if (category === 'cafe') iconClass = 'fas fa-coffee';
     else if (category === 'hotel') iconClass = 'fas fa-bed';
+    else if (category === 'gourmet') iconClass = 'fas fa-utensils';
 
     return L.divIcon({
       className: 'custom-pin',
