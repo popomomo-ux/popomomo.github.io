@@ -55,7 +55,7 @@ defaults:
       path: ""
       type: "posts"
     values:
-    　layout: "single"
+      layout: "single"
       author_profile: true
 
 # 検索機能の設定
