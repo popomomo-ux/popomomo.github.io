@@ -10,7 +10,7 @@
     z-index: 9999;
     transition: width 0.1s ease;
   }
-  /* トップへ戻るボタンのスタイル */
+  /* トップへ戻るボタンのスタイル（常時表示テスト用） */
   #back-to-top {
     position: fixed;
     bottom: 24px;
@@ -22,9 +22,7 @@
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    transform: translateY(10px);
+    opacity: 1; /* ← 最初から表示させる */
     z-index: 999;
     font-size: 14px;
   }
@@ -32,7 +30,7 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. 読書進捗バーを自動生成してページに追加
+  // 1. 読書進捗バーの生成
   const progress = document.createElement("div");
   progress.id = "reading-progress";
   document.body.appendChild(progress);
@@ -44,22 +42,12 @@ document.addEventListener("DOMContentLoaded", () => {
     progress.style.width = scrolled + "%";
   });
 
-  // 2. トップへ戻るボタンを自動生成してページに追加
+  // 2. トップへ戻るボタンの生成
   const btn = document.createElement("button");
   btn.id = "back-to-top";
   btn.innerHTML = "▲";
   btn.title = "トップへ戻る";
   document.body.appendChild(btn);
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      btn.style.opacity = "1";
-      btn.style.transform = "translateY(0)";
-    } else {
-      btn.style.opacity = "0";
-      btn.style.transform = "translateY(10px)";
-    }
-  });
 
   btn.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
