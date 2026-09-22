@@ -35,7 +35,9 @@ author:
 
 # 利用プラグイン
 plugins:
+　- jekyll-remote-theme
   - jekyll-paginate
+  - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
