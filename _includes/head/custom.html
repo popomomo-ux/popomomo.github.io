@@ -10,7 +10,8 @@
     z-index: 9999;
     transition: width 0.1s ease;
   }
-  /* トップへ戻るボタンのスタイル（アニメーション付き） */
+  
+  /* トップへ戻るボタンのベーススタイル（非表示時） */
   #back-to-top {
     position: fixed;
     bottom: 24px;
@@ -22,11 +23,19 @@
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    opacity: 0; /* 最初は非表示 */
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    transform: translateY(10px); /* 少し下から浮き出る準備 */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
     z-index: 999;
     font-size: 14px;
+  }
+
+  /* 表示状態のクラス */
+  #back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
   }
 </style>
 
@@ -51,16 +60,18 @@ document.addEventListener("DOMContentLoaded", () => {
   btn.title = "トップへ戻る";
   document.body.appendChild(btn);
 
-  // 300px以上スクロールしたときにふわっと表示
-  window.addEventListener("scroll", () => {
+  // 表示・非表示を切り替える関数
+  const toggleButton = () => {
     if (window.scrollY > 300) {
-      btn.style.opacity = "1";
-      btn.style.transform = "translateY(0)";
+      btn.classList.add("show");
     } else {
-      btn.style.opacity = "0";
-      btn.style.transform = "translateY(10px)";
+      btn.classList.remove("show");
     }
-  });
+  };
+
+  // スクロール時およびページ読み込み時にも判定
+  window.addEventListener("scroll", toggleButton);
+  toggleButton();
 
   // クリックしたらスムーズにトップへ戻る
   btn.addEventListener("click", () => {
