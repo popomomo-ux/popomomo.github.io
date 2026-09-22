@@ -17,7 +17,7 @@ author_profile: true
     <button class="filter-btn category-btn" data-category="gourmet">グルメ</button>
     <button class="filter-btn category-btn" data-category="spa">温泉</button>
     <button class="filter-btn category-btn" data-category="temple">神社・お寺</button>
-    
+    <button class="filter-btn category-btn" data-category="festival">お祭り</button>
   </div>
 </div>
 
@@ -162,6 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
     else if (category === 'gourmet') iconClass = 'fas fa-utensils';
     else if (category === 'spa') iconClass = 'fas fa-hot-tub';
     else if (category === 'temple') iconClass = 'fas fa-torii-gate';
+    else if (category === 'festival') iconClass = 'fas fa-drum';
 
     return L.divIcon({
       className: 'custom-pin',
