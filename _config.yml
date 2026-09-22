@@ -20,18 +20,21 @@ author:
   bio    : "夫婦が財テクを駆使して旅を楽しむブログです。"
   # avatar : "/assets/images/biophoto.jpg" # 顔写真やアイコン画像を使う場合
   links:
-    # - label: "GitHub"
-    #   icon: "fab fa-fw fa-github"
-    #   url: "https://github.com/popomomo-ux"
+    - label: "HOME"
+      icon: "fas fa-house"
+      url: "/popomomoblog/"
     - label: "カテゴリー一覧"
       icon: "fas fa-fw fa-folder-open" # フォルダのアイコン
-      url: "/popomomoblog/categories/"           # 作成したカテゴリーページのURL
+      url: "/popomomoblog/categories/"
     - label: "タグ一覧"
       icon: "fas fa-fw fa-tag" # フォルダのアイコン
       url: "/popomomoblog/tags/"          
-    - label: "マップ"
+    - label: "行きたい・行った場所マップ"
       icon: "fas fa-fw fa-compass" # フォルダのアイコン
       url: "/popomomoblog/map/"
+    - label: "バケットリスト"
+      icon: "fas fa-box-open"
+      url: "/popomomoblog/xxxx/"
     - label: "サイト内検索"
       icon: "fas fa-fw fa-search"
       url: "/popomomoblog/search/"
