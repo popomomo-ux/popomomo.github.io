@@ -64,3 +64,7 @@ defaults:
 # 検索機能の設定
 search: false
 search_provider: "lunr"
+
+# 作成ページを読み込ませる
+include:
+  - "_pages"
