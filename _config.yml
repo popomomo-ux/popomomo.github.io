@@ -24,7 +24,7 @@ author:
       icon: "fas fa-house"
       url: "/popomomoblog/"
     - label: "ステータス"
-      icon: "fas fa-fist-raised"
+      icon: "fas fa-shield-alt"
       url: "/popomomoblog/status/"
     - label: "カテゴリー一覧"
       icon: "fas fa-fw fa-folder-open" # フォルダのアイコン
