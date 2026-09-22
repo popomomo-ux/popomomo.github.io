@@ -47,6 +47,45 @@ document.addEventListener("DOMContentLoaded", () => {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
 
+  //アイコン一覧
+  //頻出
+  //カメラ: fas fa-camera
+  //カフェ・コーヒー: fas fa-coffee
+  //ご飯・レストラン: fas fa-utensils
+  //ホテル・ベッド: fas fa-bed
+  //ショッピング: fas fa-shopping-bag
+  //温泉・お風呂: fas fa-hot-tub （または fas fa-bath）
+
+  //交通系
+  //電車、駅：fas fa-train
+  //飛行機、空港：fas fa-plane
+  //車、ドライブスポット、駐車場：fas fa-car
+  //バス停、高速バス乗り場：fas fa-bus
+  //船、フェリー乗り場、港：fas fa-ship 
+  //グルメ・お酒・スイーツ系
+  //ビール、居酒屋、パブ：fas fa-beer
+  //バー、おしゃれなカクテルが飲める店：fas fa-cocktail
+  //アイス、ジェラート、スイーツ店：fas fa-ice-cream
+  //その他・お出かけ系
+  //チケット売り場、美術館・テーマパークの入場口：fas fa-ticket-alt
+  //一般的なお店、お土産屋さん、商店街：fas fa-store
+  //大きな商業施設、ビル、デパート：fas fa-building
+
+  //カラー一覧
+  // 赤・ピンク系（お気に入り・重要スポット）
+  //#ff4d4f （鮮やかな赤 ※一番目立つので、最重要スポットやお気に入りに最適）
+  // オレンジ・黄色系（グルメ・カフェ・ポップ）
+  //#fa8c16 （明るいオレンジ ※カフェや飲食店、スイーツ店にぴったり）
+  // 緑系（自然・公園・リラックス）
+  //#52c41a （爽やかな黄緑 ※公園や植物園、アウトドアスポットに）
+  // 青・水色系（ホテル・交通・クール）
+  //#1890ff （すっきりした青 ※ホテルや商業施設、ビジネス系に）
+  // 紫・その他（ショップ・特別）
+  //#722ed1 （深みのある紫 ※おしゃれな雑貨店や特別なスポットに）
+  // モノトーン系（通常ピン・控えめなスポット）
+  //#595959 （ダークグレー ※あまり目立たせたくない一般的なピンに）
+
+  
   // --- 1. 観光・お出かけ用アイコンピン（例：カメラ） ---
   const spotIcon = L.divIcon({
     className: 'custom-pin',
