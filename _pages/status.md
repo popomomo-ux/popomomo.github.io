@@ -87,15 +87,15 @@ author_profile: true
           </tr>
           <tr>
             <th><i class="fas fa-tshirt"></i> 防具（メインバンク）</th>
-            <td>ドコモSMTBネット銀行 <span>(DEF +40 / 疲労軽減)</span></td>
+            <td>ドコモSMTBネット銀行 <span>(DEF +40 / 手数料軽減)</span></td>
           </tr>
           <tr>
             <th><i class="fas fa-shield-alt"></i> 盾（携帯電話）</th>
-            <td>楽天モバイル <span>(DEF +40 / 疲労軽減)</span></td>
+            <td>楽天モバイル <span>(DEF +40 / 通信料軽減)</span></td>
           </tr>
           <tr>
             <th><i class="fas fa-ring"></i> 装飾品（サブスク）</th>
-            <td>Amazonプライム <span>(LUCK +99 / ポイント倍増)</span></td>
+            <td>Amazonプライム <span>(LUCK +99 / 送料無料！)</span></td>
           </tr>
           <tr>
             <th><i class="fas fa-box"></i> 所持品</th>
