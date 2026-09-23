@@ -146,7 +146,7 @@ author_profile: true
 
 <style>
   .initial-content, .page {
-    max-width: 1000px !important; /* 必要に応じて 1000px〜1100px 等に調整可能です */
+    max-width: 2000px !important; /* 必要に応じて 1000px〜1100px 等に調整可能です */
   }
   /* パーティ全体コンテナ */
   .rpg-party-container {
