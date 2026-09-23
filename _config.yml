@@ -32,10 +32,10 @@ author:
     - label: "タグ一覧"
       icon: "fas fa-fw fa-tag" # フォルダのアイコン
       url: "/popomomoblog/tags/"          
-    - label: "行きたい・行った場所マップ"
+    - label: "ワールドマップ"
       icon: "fas fa-fw fa-compass" # フォルダのアイコン
       url: "/popomomoblog/map/"
-    - label: "バケットリスト"
+    - label: "クエストボード<br>バケットリスト"
       icon: "fas fa-box-open"
       url: "/popomomoblog/xxxx/"
     - label: "サイト内検索"
