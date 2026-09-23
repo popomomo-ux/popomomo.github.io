@@ -17,7 +17,7 @@ author_profile: true
     <ul class="rpg-stats-list">
       <li><span>称号 / 職業:</span> <strong>リモートワーカー / ポイ活士</strong></li>
       <li><span>HP:</span> 1200 / 1200</li>
-      <li><span>総魔力値:</span> <strong id="total-magic" style="color: #0077cc;">0</strong> Pt</li>
+      <li><span>総MP:</span> <strong id="total-magic" style="color: #0077cc;">0</strong> Pt</li>
       <li><span>攻撃力 (ATK):</span> 120</li>
       <li><span>防御力 (DEF):</span> 95</li>
       <li><span>素早さ (AGI):</span> 150</li>
@@ -38,7 +38,7 @@ author_profile: true
       <div class="rpg-stone-card" data-points="8400">
         <div class="stone-icon">🔥</div>
         <div class="stone-info">
-          <div class="stone-name">はぴｅポイント</div>
+          <div class="stone-name">PayPayポイント</div>
           <div class="stone-value">8,400 Pt</div>
         </div>
       </div>
@@ -46,7 +46,7 @@ author_profile: true
       <div class="rpg-stone-card" data-points="12000">
         <div class="stone-icon">✨</div>
         <div class="stone-info">
-          <div class="stone-name">WAON POINT</div>
+          <div class="stone-name">Pontaポイント</div>
           <div class="stone-value">12,000 Pt</div>
         </div>
       </div>
@@ -54,7 +54,7 @@ author_profile: true
       <div class="rpg-stone-card" data-points="6500">
         <div class="stone-icon">🌟</div>
         <div class="stone-info">
-          <div class="stone-name">Sポイント</div>
+          <div class="stone-name">楽天ポイント</div>
           <div class="stone-value">6,500 Pt</div>
         </div>
       </div>
@@ -62,7 +62,7 @@ author_profile: true
       <div class="rpg-stone-card" data-points="9300">
         <div class="stone-icon">🌀</div>
         <div class="stone-info">
-          <div class="stone-name">WESTERポイント</div>
+          <div class="stone-name">dポイント</div>
           <div class="stone-value">9,300 Pt</div>
         </div>
       </div>
@@ -70,7 +70,7 @@ author_profile: true
       <div class="rpg-stone-card" data-points="5000">
         <div class="stone-icon">🔮</div>
         <div class="stone-info">
-          <div class="stone-name">JRキューポ</div>
+          <div class="stone-name">Microsoftポイント</div>
           <div class="stone-value">5,000 Pt</div>
         </div>
       </div>
@@ -100,9 +100,7 @@ author_profile: true
         <th><i class="fas fa-box"></i> 所持品</th>
         <td>世帯主の大葉（家庭菜園） <span>(HP回復・栽培中)</span></td>
       </tr>
-    </table>
-  </div>
-</div>
+
 
 <style>
   /* RPG風ステータスカードのデザイン */
