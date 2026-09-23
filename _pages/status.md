@@ -23,7 +23,7 @@ author_profile: true
       <div class="rpg-body">
         <!-- 基本ステータス -->
         <ul class="rpg-stats-list">
-          <li><span>職業:</span> <strong style="flex: 1; text-align: center;">リモートワーカー / ポイ活士</strong></li>
+          <li><span>職業:</span> <strong style="flex: 1; text-align: center;">ポイ活士</strong></li>
           <li><span>HP:</span> <strong style="flex: 1; text-align: center;">1200 / 1200</strong></li>
           <li><span>MP（総保有ポイント）:</span> <strong id="total-magic" style="color: #0077cc; flex: 1; text-align: center;">0 Pt</strong></li>
           <li><span>攻撃力 (ATK):</span> <strong style="flex: 1; text-align: center;">120</strong></li>
