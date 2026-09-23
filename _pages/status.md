@@ -7,7 +7,7 @@ author_profile: true
 
 <div class="rpg-party-container">
   <div class="board-header-title">
-    <span><i class="fas fa-users" style="color: #ffcc00;"></i> パーティ ステータス <i class="fas fa-users" style="color: #ffcc00;"></i></span>
+    <span><i class="fas fa-users" style="color: #ffcc00;"></i> パーティ<i class="fas fa-users" style="color: #ffcc00;"></i></span>
   </div>
 
   <!-- 2人分を並べるグリッド枠 -->
