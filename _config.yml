@@ -27,16 +27,16 @@ author:
       icon: "fas fa-shield-alt"
       url: "/popomomoblog/status/"
     - label: "ワールドマップ"
-      icon: "fas fa-map" # フォルダのアイコン
+      icon: "fas fa-compass"
       url: "/popomomoblog/map/"
     - label: "クエストボード<br>　（バケットリスト）"
       icon: "fas fa-clipboard-list"
       url: "/popomomoblog/bucket-list/"
     - label: "カテゴリー一覧"
-      icon: "fas fa-fw fa-folder-open" # フォルダのアイコン
+      icon: "fas fa-fw fa-folder-open"
       url: "/popomomoblog/categories/"
     - label: "タグ一覧"
-      icon: "fas fa-fw fa-tag" # フォルダのアイコン
+      icon: "fas fa-fw fa-tag"
       url: "/popomomoblog/tags/"          
 
     - label: "サイト内検索"
