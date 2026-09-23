@@ -175,7 +175,7 @@ author_profile: true
 　.rpg-party-grid {
     display: grid;
     grid-template-columns: 1fr; /* 1列に変更 */
-    gap: 100px; /* カード同士の上下の隙間 */
+    gap: 1000px; /* カード同士の上下の隙間 */
   }
 
   /* RPG風ステータスカードのデザイン */
