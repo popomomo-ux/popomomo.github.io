@@ -8,7 +8,7 @@ author_profile: true
 
 <div class="rpg-status-card">
   <div class="rpg-header">
-    <h3>冒険者のステータス</h3>
+    <h3>ぽぽのステータス</h3>
     <span class="rpg-level">Lv. 永遠の18歳</span>
   </div>
   
@@ -17,7 +17,7 @@ author_profile: true
     <ul class="rpg-stats-list">
       <li><span>称号 / 職業:</span> <strong>リモートワーカー / ポイ活士</strong></li>
       <li><span>HP:</span> 1200 / 1200</li>
-      <li><span>総MP:</span> <strong id="total-magic" style="color: #0077cc;">0</strong> Pt</li>
+      <li><span>MP（総ポイント）:</span> <strong id="total-magic" style="color: #0077cc;">0</strong> Pt</li>
       <li><span>攻撃力 (ATK):</span> 120</li>
       <li><span>防御力 (DEF):</span> 95</li>
       <li><span>素早さ (AGI):</span> 150</li>
@@ -89,8 +89,8 @@ author_profile: true
       </tr>
       <tr>
       <tr>
-        <th><i class="fas fa-mobile-alt"></i> 楽天モバイル（携帯電話）</th>
-        <td>ドコモSMTBネット銀行 <span>(DEF +40 / 疲労軽減)</span></td>
+        <th><i class="fas fa-shield-alt"></i> 盾</th>
+        <td>楽天モバイル（携帯電話） <span>(DEF +40 / 疲労軽減)</span></td>
       </tr>
       <tr>
         <th><i class="fas fa-ring"></i> 装飾品（サブスク）</th>
