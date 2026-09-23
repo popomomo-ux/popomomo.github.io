@@ -70,7 +70,7 @@ author_profile: true
       <div class="rpg-stone-card" data-points="5000">
         <div class="stone-icon">🔮</div>
         <div class="stone-info">
-          <div class="stone-name">Microsoftポイント（1/10表記）</div>
+          <div class="stone-name">Microsoftポイント（1/10）</div>
           <div class="stone-value">1,000 Pt</div>
         </div>
       </div>
