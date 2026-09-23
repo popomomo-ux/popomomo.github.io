@@ -16,7 +16,7 @@ author_profile: true
     <!-- ================= 1人目：自分 ================= -->
     <div class="rpg-status-card">
       <div class="rpg-header">
-        <h3>ぽぽのステータス</h3>
+        <h3>ぽぽ</h3>
         <span class="rpg-level">Lv. 永遠の18歳</span>
       </div>
       
@@ -109,7 +109,7 @@ author_profile: true
     <!-- ================= 2人目：パートナー ================= -->
     <div class="rpg-status-card">
       <div class="rpg-header" style="background: #2d2340;">
-        <h3>もものステータス</h3>
+        <h3>もも</h3>
         <span class="rpg-level" style="background: #4a90e2;">Lv. 草むしり検定3級</span>
       </div>
       
