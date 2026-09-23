@@ -17,7 +17,7 @@ locale: "ja-JP"
 # サイドバーに表示するプロフィール設定
 author:
   name   : "ぽぽ"
-  bio    : "関西在住のサラリーマン。<br>ポイ活と財テクを楽しみながら日々を過ごしています。"
+  bio    : "関西在住のサラリーマン。<br>節約と財テクを楽しみながら日々を過ごしています。"
   # avatar : "/assets/images/biophoto.jpg" # 顔写真やアイコン画像を使う場合
   links:
     - label: "HOME"
