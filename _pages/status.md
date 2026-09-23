@@ -90,7 +90,7 @@ author_profile: true
             <td>ドコモSMTBネット銀行 <span>(DEF +40 / 疲労軽減)</span></td>
           </tr>
           <tr>
-            <th><i class="fas fa-shield-alt" style="color: #00bcd4;"></i> 盾（携帯電話）</th>
+            <th><i class="fas fa-shield-alt"></i> 盾（携帯電話）</th>
             <td>楽天モバイル <span>(DEF +40 / 疲労軽減)</span></td>
           </tr>
           <tr>
