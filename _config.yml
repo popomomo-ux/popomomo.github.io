@@ -27,11 +27,11 @@ author:
       icon: "fas fa-shield-alt"
       url: "/popomomoblog/status/"
     - label: "ワールドマップ"
-      icon: "fas fa-fw fa-compass" # フォルダのアイコン
+      icon: "fas fa-map" # フォルダのアイコン
       url: "/popomomoblog/map/"
     - label: "クエストボード<br>　（バケットリスト）"
-      icon: "fas fa-box-open"
-      url: "/popomomoblog/xxxx/"
+      icon: "fas fa-clipboard-list"
+      url: "/popomomoblog/bucket-list/"
     - label: "カテゴリー一覧"
       icon: "fas fa-fw fa-folder-open" # フォルダのアイコン
       url: "/popomomoblog/categories/"
