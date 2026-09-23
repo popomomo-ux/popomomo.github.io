@@ -55,7 +55,7 @@ author_profile: true
         <div class="stone-icon">🌟</div>
         <div class="stone-info">
           <div class="stone-name">楽天ポイント</div>
-          <div class="stone-value">6,500 Pt</div>
+          <div class="stone-value">100 Pt</div>
         </div>
       </div>
       <!-- 5: dポイント -->
@@ -70,8 +70,8 @@ author_profile: true
       <div class="rpg-stone-card" data-points="5000">
         <div class="stone-icon">🔮</div>
         <div class="stone-info">
-          <div class="stone-name">Microsoftポイント</div>
-          <div class="stone-value">5,000 Pt</div>
+          <div class="stone-name">Microsoftポイント（1/10表記）</div>
+          <div class="stone-value">1,000 Pt</div>
         </div>
       </div>
     </div>
