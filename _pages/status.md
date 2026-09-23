@@ -25,7 +25,7 @@ author_profile: true
         <ul class="rpg-stats-list">
           <li><span>称号 / 職業:</span> <strong style="flex: 1; text-align: center;">リモートワーカー / ポイ活士</strong></li>
           <li><span>HP:</span> <strong style="flex: 1; text-align: center;">1200 / 1200</strong></li>
-          <li><span>MP（総保有ポイント）:</span> <strong id="total-magic" style="color: #0077cc;">0 Pt</strong></li>
+          <li><span>MP（総保有ポイント）:</span> <strong id="total-magic" style="color: #0077cc; text-align: center;">0 Pt</strong></li>
           <li><span>攻撃力 (ATK):</span> <strong style="flex: 1; text-align: center;">120</strong></li>
           <li><span>防御力 (DEF):</span> <strong style="flex: 1; text-align: center;">95</strong></li>
           <li><span>素早さ (AGI):</span> <strong style="flex: 1; text-align: center;">150</strong></li>
@@ -117,7 +117,7 @@ author_profile: true
         <ul class="rpg-stats-list">
           <li><span>職業:</span> <strong style="flex: 1; text-align: center;">トラベラー</strong></li>
           <li><span>HP:</span> <strong style="flex: 1; text-align: center;">1200 / 1200</strong></li>
-          <li><span>総魔力値:</span> <strong style="color: #0077cc;">-- Pt</strong></li>
+          <li><span>総魔力値:</span> <strong style="color: #0077cc; text-align: center;">-- Pt</strong></li>
           <li><span>攻撃力 (ATK):</span> <strong style="flex: 1; text-align: center;"> 110</strong></li>
           <li><span>防御力 (DEF):</span> <strong style="flex: 1; text-align: center;">100</strong></li>
           <li><span>素早さ (AGI):</span> <strong style="flex: 1; text-align: center;">140</strong></li>
