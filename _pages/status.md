@@ -110,7 +110,7 @@ author_profile: true
     <div class="rpg-status-card">
       <div class="rpg-header" style="background: #2d2340;">
         <h3>もものステータス</h3>
-        <span class="rpg-level" style="background: #4a90e2;">Lv. ？？？</span>
+        <span class="rpg-level" style="background: #4a90e2;">Lv. 草むしり検定3級</span>
       </div>
       
       <div class="rpg-body">
@@ -172,10 +172,10 @@ author_profile: true
   }
 
   /* 2人分を左右に並べるグリッド */
-  .rpg-party-grid {
+　.rpg-party-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
+    grid-template-columns: 1fr; /* 1列に変更 */
+    gap: 20px; /* カード同士の上下の隙間 */
   }
 
   /* RPG風ステータスカードのデザイン */
