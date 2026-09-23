@@ -1,5 +1,5 @@
 ---
-layout: splash
+layout: single
 title: "プロフィール"
 permalink: /status/
 author_profile: true
