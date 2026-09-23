@@ -23,12 +23,12 @@ author_profile: true
       <div class="rpg-body">
         <!-- 基本ステータス -->
         <ul class="rpg-stats-list">
-          <li><span>称号 / 職業:</span> <strong>リモートワーカー / ポイ活士</strong></li>
-          <li><span>HP:</span> 1200 / 1200</li>
+          <li><span>称号 / 職業:</span> <strong style="flex: 1; text-align: center;">リモートワーカー / ポイ活士</strong></li>
+          <li><span>HP:</span> <strong style="flex: 1; text-align: center;">1200 / 1200</li>
           <li><span>MP（総保有ポイント）:</span> <strong id="total-magic" style="color: #0077cc;">0</strong> Pt</li>
-          <li><span>攻撃力 (ATK):</span> 120</li>
-          <li><span>防御力 (DEF):</span> 95</li>
-          <li><span>素早さ (AGI):</span> 150</li>
+          <li><span>攻撃力 (ATK):</span> <strong style="flex: 1; text-align: center;">120</strong></li>
+          <li><span>防御力 (DEF):</span> <strong style="flex: 1; text-align: center;">95</strong></li>
+          <li><span>素早さ (AGI):</span> <strong style="flex: 1; text-align: center;">150</strong></li>
         </ul>
 
         <!-- 6大魔石グリッド -->
@@ -115,12 +115,12 @@ author_profile: true
       
       <div class="rpg-body">
         <ul class="rpg-stats-list">
-          <li><span>職業:</span> <strong>トラベラー</strong></li>
+          <li><span>職業:</span> <strong style="flex: 1; text-align: center;">トラベラー</strong></li>
           <li><span>HP:</span> 1200 / 1200</li>
           <li><span>総魔力値:</span> <strong style="color: #0077cc;">--</strong> Pt</li>
-          <li><span>攻撃力 (ATK):</span> 110</li>
-          <li><span>防御力 (DEF):</span> 100</li>
-          <li><span>素早さ (AGI):</span> 140</li>
+          <li><span>攻撃力 (ATK):</span><strong style="flex: 1; text-align: center;"> 110</strong></li>
+          <li><span>防御力 (DEF):</span> <strong style="flex: 1; text-align: center;">100</strong></li>
+          <li><span>素早さ (AGI):</span> <strong style="flex: 1; text-align: center;">140</strong></li>
         </ul>
 
         <h4 class="rpg-section-title"><i class="fas fa-shield-alt"></i> 装備品 & アイテム</h4>
