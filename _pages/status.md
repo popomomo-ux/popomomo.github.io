@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: splash
 title: "プロフィール"
 permalink: /status/
 author_profile: true
@@ -9,7 +9,7 @@ author_profile: true
 <div class="rpg-status-card">
   <div class="rpg-header">
     <h3>冒険者のステータス</h3>
-    <span class="rpg-level">Lv. 18</span>
+    <span class="rpg-level">Lv. 永遠の18歳</span>
   </div>
   
   <div class="rpg-body">
@@ -17,30 +17,88 @@ author_profile: true
     <ul class="rpg-stats-list">
       <li><span>称号 / 職業:</span> <strong>リモートワーカー / ポイ活士</strong></li>
       <li><span>HP:</span> 1200 / 1200</li>
-      <li><span>MP:</span> 450 / 450</li>
+      <li><span>総魔力値:</span> <strong id="total-magic" style="color: #0077cc;">0</strong> Pt</li>
       <li><span>攻撃力 (ATK):</span> 120</li>
       <li><span>防御力 (DEF):</span> 95</li>
       <li><span>素早さ (AGI):</span> 150</li>
     </ul>
 
+    <!-- 6大魔石グリッド (2列×3行 / レトロ風) -->
+    <h4 class="rpg-section-title"><i class="fas fa-gem"></i> 6大魔石（保有ポイント収蔵庫）</h4>
+    <div class="rpg-stone-grid">
+      <!-- 1: Vポイント -->
+      <div class="rpg-stone-card" data-points="15000">
+        <div class="stone-icon">💎</div>
+        <div class="stone-info">
+          <div class="stone-name">Vポイント</div>
+          <div class="stone-value">15,000 Pt</div>
+        </div>
+      </div>
+      <!-- 2: PayPayポイント -->
+      <div class="rpg-stone-card" data-points="8400">
+        <div class="stone-icon">🔥</div>
+        <div class="stone-info">
+          <div class="stone-name">はぴｅポイント</div>
+          <div class="stone-value">8,400 Pt</div>
+        </div>
+      </div>
+      <!-- 3: Pontaポイント -->
+      <div class="rpg-stone-card" data-points="12000">
+        <div class="stone-icon">✨</div>
+        <div class="stone-info">
+          <div class="stone-name">WAON POINT</div>
+          <div class="stone-value">12,000 Pt</div>
+        </div>
+      </div>
+      <!-- 4: 楽天ポイント -->
+      <div class="rpg-stone-card" data-points="6500">
+        <div class="stone-icon">🌟</div>
+        <div class="stone-info">
+          <div class="stone-name">Sポイント</div>
+          <div class="stone-value">6,500 Pt</div>
+        </div>
+      </div>
+      <!-- 5: dポイント -->
+      <div class="rpg-stone-card" data-points="9300">
+        <div class="stone-icon">🌀</div>
+        <div class="stone-info">
+          <div class="stone-name">WESTERポイント</div>
+          <div class="stone-value">9,300 Pt</div>
+        </div>
+      </div>
+      <!-- 6: Microsoftポイント -->
+      <div class="rpg-stone-card" data-points="5000">
+        <div class="stone-icon">🔮</div>
+        <div class="stone-info">
+          <div class="stone-name">JRキューポ</div>
+          <div class="stone-value">5,000 Pt</div>
+        </div>
+      </div>
+    </div>
+
     <!-- 装備品セクション -->
     <h4 class="rpg-section-title"><i class="fas fa-shield-alt"></i> 装備品 & アイテム</h4>
     <table class="rpg-equipment-table">
       <tr>
-        <th><i class="fas fa-magic"></i> 武器</th>
-        <td>メカニカルキーボード <span>(ATK +50)</span></td>
+        <th><i class="fas fa-magic"></i> 武器（メインクレカ）</th>
+        <td>三井住友ゴールドカード <span>(ATK +50)</span></td>
       </tr>
       <tr>
-        <th><i class="fas fa-tshirt"></i> 防具</th>
-        <td>エルゴノミックメッシュチェア <span>(DEF +40 / 疲労軽減)</span></td>
+        <th><i class="fas fa-tshirt"></i> 防具（メインバンク）</th>
+        <td>ドコモSMTBネット銀行 <span>(DEF +40 / 疲労軽減)</span></td>
       </tr>
       <tr>
-        <th><i class="fas fa-ring"></i> 装飾品</th>
-        <td>三井住友ゴールドカード <span>(LUCK +99 / ポイント倍増)</span></td>
+      <tr>
+        <th><i class="fas fa-mobile-alt"></i> 楽天モバイル（携帯電話）</th>
+        <td>ドコモSMTBネット銀行 <span>(DEF +40 / 疲労軽減)</span></td>
+      </tr>
+      <tr>
+        <th><i class="fas fa-ring"></i> 装飾品（サブスク）</th>
+        <td>Amazonプライム <span>(LUCK +99 / ポイント倍増)</span></td>
       </tr>
       <tr>
         <th><i class="fas fa-box"></i> 所持品</th>
-        <td>ベランダのミョウガ <span>(HP回復・栽培中)</span></td>
+        <td>世帯主の大葉（家庭菜園） <span>(HP回復・栽培中)</span></td>
       </tr>
     </table>
   </div>
@@ -108,6 +166,51 @@ author_profile: true
     margin-bottom: 10px;
     color: #333;
   }
+
+  /* 6大魔石グリッド (2列×3行・レトロ風テイスト) */
+  .rpg-stone-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .rpg-stone-card {
+    background-color: #15152b;
+    border: 2px solid #444466;
+    color: #fff;
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    transition: transform 0.1s, border-color 0.1s;
+  }
+  .rpg-stone-card:hover {
+    border-color: #ffcc00;
+    transform: translateY(-2px);
+  }
+  .stone-icon {
+    font-size: 1.2rem;
+    background: #090913;
+    padding: 4px 6px;
+    border: 1px solid #33334d;
+  }
+  .stone-info {
+    display: flex;
+    flex-direction: column;
+  }
+  .stone-name {
+    font-size: 0.7rem;
+    color: #aaaaaa;
+  }
+  .stone-value {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #ffeb3b;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  
   .rpg-equipment-table {
     width: 100%;
     border-collapse: collapse;
@@ -136,3 +239,19 @@ author_profile: true
     }
   }
 </style>
+
+<script>
+/* 各魔石のポイントを自動合算して「総魔力値」に反映するスクリプト */
+document.addEventListener("DOMContentLoaded", function() {
+  const cards = document.querySelectorAll('.rpg-stone-card');
+  let total = 0;
+  cards.forEach(card => {
+    const pts = parseInt(card.getAttribute('data-points')) || 0;
+    total += pts;
+  });
+  const totalEl = document.getElementById('total-magic');
+  if (totalEl) {
+    totalEl.textContent = total.toLocaleString();
+  }
+});
+</script>
