@@ -4,7 +4,13 @@ title: "プロフィール"
 permalink: /status/
 author_profile: true
 ---
+<div class="rpg-party-container">
+  <div class="board-header-title">
+    <span><i class="fas fa-users" style="color: #ffcc00;"></i> 冒険者パーティ ステータス <i class="fas fa-users" style="color: #ffcc00;"></i></span>
+  </div>
 
+  <!--ここから2カラム用の枠で囲む -->
+  <div class="rpg-party-grid">
 
 <div class="rpg-status-card">
   <div class="rpg-header">
@@ -100,7 +106,24 @@ author_profile: true
         <th><i class="fas fa-box"></i> 所持品</th>
         <td>世帯主の大葉（家庭菜園） <span>(HP回復・栽培中)</span></td>
       </tr>
-
+      
+<!--2人目（パートナー）のカードを丸ごとコピーして追加 -->
+    <div class="rpg-status-card">
+      <div class="rpg-header" style="background: #2d2340;">
+        <h3>冒険者 2号 (相棒)</h3>
+        <span class="rpg-level" style="background: #4a90e2;">Lv. 旅の同行者</span>
+      </div>
+      <div class="rpg-body">
+        <!-- 2人目のステータスや装備品を記述 -->
+        <ul class="rpg-stats-list">
+          <li><span>職業:</span> <strong>トラベラー</strong></li>
+          <li><span>HP:</span> 1200 / 1200</li>
+          <!-- 略 -->
+        </ul>
+      </div>
+    </div>
+　</div> <!-- /.rpg-party-grid -->
+</div>
 
 <style>
   /* RPG風ステータスカードのデザイン */
