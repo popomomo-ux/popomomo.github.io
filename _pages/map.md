@@ -172,23 +172,55 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --- スポットデータ一覧 ---
+  //////////////////////////////// --- スポットデータ一覧 --- ////////////////////////////////
+  
   const locations = [
+    /////// 観光地（spot）///////
     { 
       lat: 34.7024, lng: 135.4959, 
       category: 'spot', status: 'want', 
       popup: '<b>大阪駅</b><br><span style="color:#ff4d4f;">【行きたい・観光】</span>' 
     },
+    /////// カフェ（cafe）///////
     { 
       lat: 34.7026, lng: 135.4947, 
       category: 'cafe', status: 'want', 
       popup: '<b>おしゃれカフェ</b><br><span style="color:#ff4d4f;">【行きたい・カフェ】</span>' 
     },
+    /////// 宿（hotel）///////
     { 
       lat: 34.7058, lng: 135.4891, 
       category: 'hotel', status: 'visited', 
       popup: '<b>宿泊したホテル</b><br><span style="color:#52c41a;">【行った・ホテル】</span>' 
     }
+    /////// グルメ（gourmet）///////
+    // { 
+    //   lat: 34.7058, lng: 135.4891, 
+    //   category: 'gourmet', status: 'visited', 
+    //   popup: '<b>おすすめランチ</b><br><span style="color:#52c41a;">【行った・ランチ】</span>' 
+    // }
+
+    /////// 温泉（spa）///////
+    // { 
+    //   lat: 34.7058, lng: 135.4891, 
+    //   category: 'spa', status: 'visited', 
+    //   popup: '<b>おすすめ温泉</b><br><span style="color:#52c41a;">【行った・温泉】</span>' 
+    // }
+    
+   /////// 神社・お寺（temple）///////
+    // { 
+    //   lat: 34.7058, lng: 135.4891, 
+    //   category: 'temple', status: 'visited', 
+    //   popup: '<b>おすすめ神社</b><br><span style="color:#52c41a;">【行った・神社】</span>' 
+    // }
+    
+   /////// お祭り（festival）///////
+    // { 
+    //   lat: 34.7058, lng: 135.4891, 
+    //   category: 'festival', status: 'visited', 
+    //   popup: '<b>おすすめお祭り</b><br><span style="color:#52c41a;">【行った・お祭り】</span>' 
+    // }
+    
   ];
 
   let currentCategory = 'all';
