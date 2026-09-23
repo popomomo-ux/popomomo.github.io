@@ -26,18 +26,19 @@ author:
     - label: "ステータス"
       icon: "fas fa-shield-alt"
       url: "/popomomoblog/status/"
-    - label: "カテゴリー一覧"
-      icon: "fas fa-fw fa-folder-open" # フォルダのアイコン
-      url: "/popomomoblog/categories/"
-    - label: "タグ一覧"
-      icon: "fas fa-fw fa-tag" # フォルダのアイコン
-      url: "/popomomoblog/tags/"          
     - label: "ワールドマップ"
       icon: "fas fa-fw fa-compass" # フォルダのアイコン
       url: "/popomomoblog/map/"
     - label: "クエストボード<br>　（バケットリスト）"
       icon: "fas fa-box-open"
       url: "/popomomoblog/xxxx/"
+    - label: "カテゴリー一覧"
+      icon: "fas fa-fw fa-folder-open" # フォルダのアイコン
+      url: "/popomomoblog/categories/"
+    - label: "タグ一覧"
+      icon: "fas fa-fw fa-tag" # フォルダのアイコン
+      url: "/popomomoblog/tags/"          
+
     - label: "サイト内検索"
       icon: "fas fa-fw fa-search"
       url: "/popomomoblog/search/"
