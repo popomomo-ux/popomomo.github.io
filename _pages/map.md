@@ -105,7 +105,7 @@ author_profile: true
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const map = L.map('blog-map').setView([34.7024, 135.4959], 14);
+  const map = L.map('blog-map').setView([34.7024, 135.4959], 10);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
