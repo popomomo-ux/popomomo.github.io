@@ -35,7 +35,7 @@ author:
     - label: "ワールドマップ"
       icon: "fas fa-fw fa-compass" # フォルダのアイコン
       url: "/popomomoblog/map/"
-    - label: "クエストボード<br>バケットリスト"
+    - label: "クエストボード<br>　（バケットリスト）"
       icon: "fas fa-box-open"
       url: "/popomomoblog/xxxx/"
     - label: "サイト内検索"
