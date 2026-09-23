@@ -184,6 +184,7 @@ author_profile: true
     border-radius: 4px;
     background: #15152b;
     overflow: hidden;
+    margin-bottom: 50px;
   }
   .rpg-header {
     background: #33334d;
