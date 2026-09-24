@@ -104,43 +104,41 @@
     width: 1.5em;
   }
 
-  /* --- 5. スマホでの常時展開 ＆ 完全な上下分離（被り防止版） --- */
+  /* --- 5. スマホでの常時展開 ＆ Flexboxによる完全な上下順序制御 --- */
   @media screen and (max-width: 64em) {
-    /* ページ全体のレイアウト基盤を縦積みにリセット */
+    /* 親コンテナを縦方向のFlexboxに変更し、子要素の並び順を完全に制御する */
     .initial-content {
-      display: block !important;
-      float: none !important;
+      display: flex !important;
+      flex-direction: column !important;
       width: 100% !important;
-      clear: both !important;
+      float: none !important;
     }
 
-    /* サイドバーを上に配置し、下に「4rem（十分な余白）」を空けて記事との被りを完全に防ぐ */
+    /* サイドバーを一番上（order: 1）に固定し、下にしっかり余白を空ける */
     .sidebar {
+      order: 1 !important;
       display: block !important;
       width: 100% !important;
       float: none !important;
-      position: static !important;
-      clear: both !important;
-      margin-bottom: 4rem !important;
+      position: relative !important;
+      margin-bottom: 2.5rem !important;
     }
 
-    /* 「Follow」ボタンを完全に非表示にする */
+    /* 「Follow」ボタンを非表示にする */
     .sidebar .author__urls-wrapper button,
     .sidebar button.author__switcher {
       display: none !important;
     }
 
-    /* プロフィールリストの制限を完全解除して全開にする */
+    /* プロフィールリストの高さ制限を完全解除 */
     .sidebar .author__urls-wrapper {
       display: block !important;
       max-height: none !important;
-      position: static !important;
+      height: auto !important;
+      overflow: visible !important;
+      position: relative !important;
       box-shadow: none !important;
       background: transparent !important;
-      overflow: visible !important;
-      height: auto !important;
-      opacity: 1 !important;
-      visibility: visible !important;
     }
 
     .sidebar .author__urls {
@@ -148,16 +146,16 @@
       height: auto !important;
     }
 
-    /* メインの記事・画像エリアをサイドバーの下に確実に回り込ませる */
-    #main,
-    .page,
-    .layout__item,
-    .archive {
+    /* メインの記事・画像エリアを必ず下（order: 2）に配置する */
+    .initial-content > .page,
+    .initial-content > .archive,
+    .initial-content > #main,
+    .initial-content > .layout__item {
+      order: 2 !important;
       display: block !important;
       width: 100% !important;
       float: none !important;
-      position: static !important;
-      clear: both !important;
+      position: relative !important;
     }
   }
 
