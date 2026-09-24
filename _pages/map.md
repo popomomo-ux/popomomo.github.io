@@ -197,11 +197,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const locations = [
     /////// 観光地（spot）///////
     { 
-      lat: 34.7024, lng: 135.4959, 
-      category: 'spot', status: 'want', 
-      popup: '<b>大阪駅</b><br><span style="color:#ff4d4f;">【行きたい・観光】</span>' 
-    },
-    { 
       lat: 34.528658, lng: 134.658774,
       category: 'spot', status: 'visited', 
       popup: '<b>ジャンボフェリー</b><br><span style="color:#ff4d4f;">神戸港から高松への船旅</span>' 
@@ -209,8 +204,8 @@ document.addEventListener("DOMContentLoaded", () => {
     /////// カフェ（cafe）///////
     { 
       lat: 34.7026, lng: 135.4947, 
-      category: 'cafe', status: 'want', 
-      popup: '<b>おしゃれカフェ</b><br><span style="color:#ff4d4f;">【行きたい・カフェ】</span>' 
+      category: 'cafe', status: 'visited', 
+      popup: '<b>今西清兵衛商店</b><br><span style="color:#ff4d4f;">5種類の利き酒とおちょこをゲット</span>' 
     },
     /////// 宿（hotel）///////
     { 
@@ -233,11 +228,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // }
     
    /////// 神社・お寺（temple）///////
-    // { 
-    //   lat: 34.7058, lng: 135.4891, 
-    //   category: 'temple', status: 'visited', 
-    //   popup: '<b>おすすめ神社</b><br><span style="color:#52c41a;">【行った・神社】</span>' 
-    // }
+    { 
+       lat: 34.68166881964122, lng: 135.8484718796952, 
+       category: 'temple', status: 'visited', 
+       popup: '<b>春日大社</b><br><span style="color:#52c41a;">大雨の中で鹿を鑑賞☂</span>' 
+     },
     
    /////// お祭り（festival）///////
     { 
