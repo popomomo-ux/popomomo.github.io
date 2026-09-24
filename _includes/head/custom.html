@@ -107,56 +107,41 @@
     width: 1.5em;
   }
 
-  /* --- 5. スマホでの常時展開・記事との被り解消（完全版） --- */
-  /* 「Follow」ボタンを非表示にする */
-  .author__urls-wrapper button {
+  /* --- 5. Minimal Mistakes用：スマホでのプロフィール常時展開＆被り解消 --- */
+  .sidebar .author__urls-wrapper button,
+  .sidebar button.author__switcher {
     display: none !important;
   }
 
-  /* リンク一覧の高さ制限を完全に解除し、常時表示させる */
-  .author__urls {
+  .sidebar .author__urls-wrapper {
     display: block !important;
-    height: auto !important;
-  }
-  .author__urls-wrapper {
     max-height: none !important;
-    height: auto !important;
+    position: static !important;
+    box-shadow: none !important;
+    background: transparent !important;
     overflow: visible !important;
   }
 
-  /* モバイル・タブレット表示時（1024px以下）のレイアウト強制整理 */
-  @media screen and (max-width: 1024px) {
+  .sidebar .author__urls {
+    display: block !important;
+  }
+
+  @media screen and (max-width: 64em) {
     .sidebar {
-      position: static !important;
       float: none !important;
       width: 100% !important;
-      height: auto !important;
+      position: relative !important;
       clear: both !important;
-      margin-bottom: 3rem !important; /* 下部に余白を空けて記事との被りを防ぐ */
+      margin-bottom: 2.5rem !important;
     }
-    
-    .sidebar .author__urls-wrapper {
-      height: auto !important;
-      max-height: none !important;
-      overflow: visible !important;
-    }
-    
+
     .initial-content, 
-    #main,
-    .layout__item {
-      clear: both !important;
+    .layout__item,
+    #main {
       float: none !important;
       width: 100% !important;
+      clear: both !important;
     }
-  }
-  /* --- テーマのJS制御を強制解除する最終手段 --- */
-  .author__urls-wrapper.is-hidden {
-    display: block !important;
-  }
-  .author__urls {
-    display: block !important;
-    visibility: visible !important;
-    max-height: none !important;
   }
 
   /* --- 6. 埋め込みマップのスタイル調整 --- */
