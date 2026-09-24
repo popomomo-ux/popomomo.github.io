@@ -138,6 +138,31 @@
     margin: 20px 0;
     z-index: 1;
   }
+
+  /* --- Author（プロフィール）全体の左寄せ・余白調整 --- */
+
+  /* 1. サイドバー全体の左側パディングを詰めて左端に寄せる場合 */
+  .sidebar {
+    padding-left: 0 !important;
+  }
+
+  /* 2. プロフィール内のテキスト（名前やバイオなど）を左揃えにする */
+  .sidebar .author__content {
+    text-align: left !important;
+    padding-left: 0 !important;
+  }
+
+  /* 3. レトロRPG風のリンク（メニュー）の配置を左側に詰める */
+  .sidebar .author__urls {
+    text-align: left !important;
+    padding-left: 0 !important;
+  }
+
+  .sidebar .author__urls li a {
+    justify-content: flex-start !important;
+    margin-left: 0 !important;
+  }
+  
 </style>
 
 <script>
