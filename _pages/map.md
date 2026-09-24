@@ -214,12 +214,16 @@ document.addEventListener("DOMContentLoaded", () => {
       popup: '<b>シャトレーゼ ガトーキングダム せとうち</b><br><span style="color:#ff4d4f;">シャトレーゼポイントで宿泊したい！</span>' 
     },
     /////// グルメ（gourmet）///////
-    // { 
-    //   lat: 34.7058, lng: 135.4891, 
-    //   category: 'gourmet', status: 'visited', 
-    //   popup: '<b>おすすめランチ</b><br><span style="color:#52c41a;">【行った・ランチ】</span>' 
-    // }
-
+     { 
+       lat: 35.116698686806814, lng: 136.18397076421496,
+       category: 'gourmet', status: 'visited', 
+       popup: '<b>近江牛専門店 万葉 太郎坊亭</b><br><span style="color:#52c41a;">近江牛の焼肉ランチ</span>' 
+    },
+    { 
+       lat: 34.98667666257747, lng: 135.76128515468568, 
+       category: 'gourmet', status: 'visited', 
+       popup: '<b>KIZAHASHI</b><br><span style="color:#52c41a;">味も器も天下一品</span>' 
+    },
     /////// 温泉（spa）///////
     // { 
     //   lat: 34.7058, lng: 135.4891, 
@@ -233,12 +237,16 @@ document.addEventListener("DOMContentLoaded", () => {
        category: 'temple', status: 'visited', 
        popup: '<b>春日大社</b><br><span style="color:#52c41a;">大雨の中で鹿を鑑賞☂</span>' 
      },
-    
+    { 
+       lat: 34.45520145314381, lng: 136.72515291048603, 
+       category: 'temple', status: 'visited', 
+       popup: '<b>伊勢神宮</b><br><span style="color:#52c41a;">2人のゆかりの地</span>' 
+     },
    /////// お祭り（festival）///////
     { 
        lat: 36.57737102425911, lng: 137.13575114865438, 
        category: 'festival', status: 'want', 
-       popup: '<b>おわら風の盆</b><br><span style="color:#52c41a;">WESTERポイントで行けるかな？</span>' 
+       popup: '<b>おわら風の盆</b><br><span style="color:#ff4d4f;">WESTERポイントで行けるかな？</span>' 
     }
     
   ];
