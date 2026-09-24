@@ -106,14 +106,22 @@
 
   /* --- 5. スマホでの常時展開 ＆ 完全な上下分離（被り防止版） --- */
   @media screen and (max-width: 64em) {
-    /* サイドバーを上に配置し、下に十分な余白を確保して浮きを防止 */
+    /* ページ全体のレイアウト基盤を縦積みにリセット */
+    .initial-content {
+      display: block !important;
+      float: none !important;
+      width: 100% !important;
+      clear: both !important;
+    }
+
+    /* サイドバーを上に配置し、下に「4rem（十分な余白）」を空けて記事との被りを完全に防ぐ */
     .sidebar {
       display: block !important;
       width: 100% !important;
       float: none !important;
-      position: relative !important;
+      position: static !important;
       clear: both !important;
-      margin-bottom: 3rem !important;
+      margin-bottom: 4rem !important;
     }
 
     /* 「Follow」ボタンを完全に非表示にする */
@@ -126,7 +134,7 @@
     .sidebar .author__urls-wrapper {
       display: block !important;
       max-height: none !important;
-      position: relative !important;
+      position: static !important;
       box-shadow: none !important;
       background: transparent !important;
       overflow: visible !important;
@@ -142,16 +150,14 @@
 
     /* メインの記事・画像エリアをサイドバーの下に確実に回り込ませる */
     #main,
-    .initial-content,
     .page,
     .layout__item,
     .archive {
       display: block !important;
       width: 100% !important;
       float: none !important;
-      position: relative !important;
+      position: static !important;
       clear: both !important;
-      margin-top: 2rem !important;
     }
   }
 
