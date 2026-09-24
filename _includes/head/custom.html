@@ -1,5 +1,5 @@
 <style>
-/* --- 1. 読書進捗バーのスタイル --- */
+  /* --- 1. 読書進捗バーのスタイル --- */
   #reading-progress {
     position: fixed;
     top: 0;
@@ -68,9 +68,10 @@
     box-shadow: 0 4px 20px rgba(0,0,0,0.5);
   }
 
-  /* --- 4. レトロRPG風プロフィールリンク（※ここを修正しました） --- */
+  /* --- 4. レトロRPG風プロフィールリンク --- */
   .author__urls li a {
-    display: block;
+    display: flex;
+    align-items: center; /* テキストと「▷」を高さ中央にする */
     background-color: #111111; /* 黒いウィンドウ背景 */
     border: 2px solid #333333; /* 黒い重厚な枠線 */
     color: #dddddd !important;
@@ -89,83 +90,57 @@
     color: #ffffff !important;
   }
 
-/* 3. ホバー時に左側に「▷」を出現させる設定（修正版） */
-.author__urls li a {
-  /* リンク自体をflexboxにして中身を中央揃えにする */
-  display: flex;
-  align-items: center; /* これでテキストと▷が常に縦中央に並ぶ */
-  /* 以前の padding: 8px 12px; は flex で制御するため不要になります */
-  padding: 8px 12px; /* 上下のパディングはそのまま維持します */
-  /* text-decoration はそのまま */
-}
-
-/* ▷（矢印）の基本設定 */
-.author__urls li a::before {
-  content: "▷ "; /* 通常時からスペースを確保するため、ここに▷を入れておきます */
-  opacity: 0;    /* 通常時は透明にして見えなくする */
-  color: #ffcc00;
-  font-weight: bold;
-  margin-right: 0; /* flexで間隔を調整するため margin は不要 */
-  
-  /* サイズの固定（レイアウトが崩れないようにするため） */
-  width: 0;
-  overflow: hidden;
-  transition: opacity 0.2s, width 0.2s; /* スムーズに表示するアニメーション */
-}
-
-/* マウスを乗せたときの「▷」の設定 */
-.author__urls li a:hover::before {
-  opacity: 1; /* パッと表示する */
-  width: 1.5em; /* ▷の分のスペースを確保（文字が右に押し出される） */
-}
-  /* 埋め込みマップのスタイル調整 */
-  #blog-map {
-    width: 100%;
-    height: 400px;
-    border-radius: 8px;
-    margin: 20px 0;
-    z-index: 1;
+  /* ▷（矢印）の基本設定 */
+  .author__urls li a::before {
+    content: "▷ ";
+    opacity: 0;
+    color: #ffcc00;
+    font-weight: bold;
+    width: 0;
+    overflow: hidden;
+    transition: opacity 0.2s, width 0.2s;
   }
 
-  /* --- スマホなどの狭い画面でもプロフィールリンクを常時展開する（完全版） --- */
-  
-  /* 1. 「Follow」ボタン自体を非表示にする */
+  /* マウスを乗せたときの「▷」の設定 */
+  .author__urls li a:hover::before {
+    opacity: 1;
+    width: 1.5em;
+  }
+
+  /* --- 5. スマホでの常時展開・記事との被り解消（完全版） --- */
+  /* 「Follow」ボタンを非表示にする */
   .author__urls-wrapper button {
     display: none !important;
   }
 
-  /* 2. 折りたたまれているリンク一覧を常に表示にする */
+  /* リンク一覧の高さ制限を完全に解除し、常時表示させる */
   .author__urls {
     display: block !important;
     height: auto !important;
   }
-
-  /* 3. プロフィールボックス全体の高さ制限を完全に解除し、自動拡張させる */
   .author__urls-wrapper {
     max-height: none !important;
     height: auto !important;
     overflow: visible !important;
   }
 
-  /* --- スマホ・タブレット表示時（1024px以下）のレイアウト崩れ・被り解消 --- */
+  /* モバイル・タブレット表示時（1024px以下）のレイアウト強制整理 */
   @media screen and (max-width: 1024px) {
-    /* サイドバー自体の領域を完全確保し、高さを自動にする */
     .sidebar {
       position: static !important;
       float: none !important;
       width: 100% !important;
       height: auto !important;
       clear: both !important;
-      margin-bottom: 3rem !important; /* 下部に十分な余白を空けて記事と離す */
+      margin-bottom: 3rem !important; /* 下部に余白を空けて記事との被りを防ぐ */
     }
-
-    /* プロフィール部分のコンテナも高さを確実に解放 */
+    
     .sidebar .author__urls-wrapper {
       height: auto !important;
       max-height: none !important;
+      overflow: visible !important;
     }
-
-    /* メインの記事コンテンツ側をサイドバーの下に強制的に回り込ませる */
+    
     .initial-content, 
     #main,
     .layout__item {
@@ -173,6 +148,15 @@
       float: none !important;
       width: 100% !important;
     }
+  }
+
+  /* --- 6. 埋め込みマップのスタイル調整 --- */
+  #blog-map {
+    width: 100%;
+    height: 400px;
+    border-radius: 8px;
+    margin: 20px 0;
+    z-index: 1;
   }
 </style>
 
@@ -236,5 +220,3 @@ document.addEventListener("DOMContentLoaded", () => {
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <!-- Leaflet JS -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-
