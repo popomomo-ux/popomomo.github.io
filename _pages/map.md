@@ -170,7 +170,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const color = (status === 'want') ? '#ff4d4f' : '#52c41a'; // 行きたい: 赤, 行った: 緑
       
     let iconClass = 'fas fa-map-marker-alt';
-    if (category === 'spot') iconClass = 'fas fa-camera';
+    if (category === 'spot') {
+      // popupの中身に「ジャンボフェリー」という文字が含まれていれば船アイコンにする
+      if (popup && popup.includes('ジャンボフェリー')) {
+        iconClass = 'fas fa-ship';
+      } else {
+        iconClass = 'fas fa-camera';
+      }
+    }
     else if (category === 'cafe') iconClass = 'fas fa-coffee';
     else if (category === 'hotel') iconClass = 'fas fa-bed';
     else if (category === 'gourmet') iconClass = 'fas fa-utensils';
@@ -193,6 +200,11 @@ document.addEventListener("DOMContentLoaded", () => {
       lat: 34.7024, lng: 135.4959, 
       category: 'spot', status: 'want', 
       popup: '<b>大阪駅</b><br><span style="color:#ff4d4f;">【行きたい・観光】</span>' 
+    },
+    { 
+      lat: 34.528658, lng: 134.658774,
+      category: 'spot', status: 'visited', 
+      popup: '<b>ジャンボフェリー</b><br><span style="color:#ff4d4f;">神戸港から高松への船旅</span>' 
     },
     /////// カフェ（cafe）///////
     { 
