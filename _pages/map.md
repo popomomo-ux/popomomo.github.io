@@ -286,6 +286,12 @@ document.addEventListener("DOMContentLoaded", () => {
        category: 'gourmet', status: 'visited', 
        popup: '<b>さかな屋くにちゃん</b><br><span style="color:#52c41a;">とんぼマグロのてこね寿司</span>' 
     },
+    ////静岡旅行////
+    { 
+       lat: 34.70586385200359, lng: 137.73413920129764,
+       category: 'gourmet', status: 'want', 
+       popup: '<b>さわやか 浜松遠鉄店</b><br><span style="color:#ff4d4f;">噂に名高いハンバーグ食べたいね</span>' 
+    },  
     /////// 温泉（spa）///////
     // { 
     //   lat: 34.7058, lng: 135.4891, 
