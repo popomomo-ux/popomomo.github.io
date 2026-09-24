@@ -214,6 +214,12 @@ document.addEventListener("DOMContentLoaded", () => {
       popup: '<b>シャトレーゼ ガトーキングダム せとうち</b><br><span style="color:#ff4d4f;">シャトレーゼポイントで宿泊したい！</span>' 
     },
     /////// グルメ（gourmet）///////
+    ////大阪旅行////
+     { 
+       lat: 35.116698686806814, lng: 136.18397076421496,
+       category: 'gourmet', status: 'visited', 
+       popup: '<b>焼きスパゲッティ×ワイン ローマ軒 大阪駅前第3ビル店</b><br><span style="color:#52c41a;">ここでしか食べられない味。30分飲み放題もギルティ</span>' 
+    },
     ////滋賀旅行////
      { 
        lat: 35.116698686806814, lng: 136.18397076421496,
