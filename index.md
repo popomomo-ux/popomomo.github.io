@@ -16,17 +16,17 @@ entries_layout: grid
   font-family: 'Courier New', Courier, monospace;
 }
    
-/* 「Recent Posts」を非表示にして、RPG風のタイトルに書き換える */
-.archive__subtitle {
-  font-size: 0 !important; /* 元の文字を隠す */
-}
+///* 「Recent Posts」を非表示にして、RPG風のタイトルに書き換える */
+//.archive__subtitle {
+//  font-size: 0 !important; /* 元の文字を隠す */
+//}
 
-.archive__subtitle::after {
-  content: "📖 冒険の書（最新の投稿）"; 
-  font-size: 1rem !important;
-  color: #ffcc00 !important;
-  font-weight: bold;
-}
+//.archive__subtitle::after {
+//  content: "📖 冒険の書（最新の投稿）"; 
+//  font-size: 1rem !important;
+//  color: #ffcc00 !important;
+//  font-weight: bold;
+//}
    
 /* 記事一覧のタイトル（「Recent Posts」など）をRPG風に装飾 */
 .archive__subtitle {
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function() {
   document.querySelectorAll('*').forEach(function(el) {
     el.childNodes.forEach(function(node) {
       if (node.nodeType === Node.TEXT_NODE && node.nodeValue.includes('Recent Posts')) {
-        node.nodeValue = node.nodeValue.replace('Recent Posts', '📖 冒険の書（最新の記録）');
+        node.nodeValue = node.nodeValue.replace('Recent Posts', '📖 冒険の書（最新の記録）📖');
       }
     });
   });
