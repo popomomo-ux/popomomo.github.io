@@ -136,6 +136,18 @@
   .author__urls {
     display: block !important;
   }
+
+  /* --- スマホ常時展開時の記事との被りを解消する設定 --- */
+  .author__urls-wrapper {
+    max-height: none !important; /* テーマ側でかけられている高さ制限を解除 */
+    overflow: visible !important;
+  }
+  .author__urls {
+    display: block !important;
+  }
+  .sidebar {
+    margin-bottom: 2.5rem !important; /* サイドバーの下に余白を確保して記事と離す */
+  }
 </style>
 
 <script>
