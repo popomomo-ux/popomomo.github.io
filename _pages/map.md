@@ -199,13 +199,13 @@ document.addEventListener("DOMContentLoaded", () => {
     { 
       lat: 34.528658, lng: 134.658774,
       category: 'spot', status: 'visited', 
-      popup: '<b>ジャンボフェリー</b><br><span style="color:#ff4d4f;">神戸港から高松への船旅</span>' 
+      popup: '<b>ジャンボフェリー</b><br><span style="color:#ff4d4f;">神戸から高松への船旅</span>' 
     },
     /////// カフェ（cafe）///////
     { 
       lat: 34.7026, lng: 135.4947, 
       category: 'cafe', status: 'visited', 
-      popup: '<b>今西清兵衛商店</b><br><span style="color:#ff4d4f;">5種類の利き酒とおちょこをゲット</span>' 
+      popup: '<b>今西清兵衛商店</b><br><span style="color:#ff4d4f;">5種類の利き酒を楽しみ、おちょこもGET</span>' 
     },
     /////// 宿（hotel）///////
     { 
