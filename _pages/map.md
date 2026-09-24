@@ -206,6 +206,11 @@ document.addEventListener("DOMContentLoaded", () => {
       category: 'spot', status: 'visited', 
       popup: '<b>鳥羽水族館</b><br><span style="color:#52c41a;">念願のラッコとの邂逅</span>' 
     },
+    { 
+      lat: 26.445519309491356, lng: 127.7455738340109, 
+      category: 'spot', status: 'want', 
+      popup: '<b>やちむんの里</b><br><span style="color:#ff4d4f;">器好きの妻の憧れの地</span>' 
+    },
 
     { 
       lat: 34.33000989198189, lng: 134.04572668164545, 
