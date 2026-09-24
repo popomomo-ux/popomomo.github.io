@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function() {
   document.querySelectorAll('*').forEach(function(el) {
     el.childNodes.forEach(function(node) {
       if (node.nodeType === Node.TEXT_NODE && node.nodeValue.includes('Recent Posts')) {
-        node.nodeValue = node.nodeValue.replace('Recent Posts', '📖 冒険の書（最新の記録）📖');
+        node.nodeValue = node.nodeValue.replace('Recent Posts', ' 冒険の書（最新の記録）📖');
       }
     });
   });
