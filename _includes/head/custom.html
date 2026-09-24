@@ -122,11 +122,11 @@
     }
   }
 
-  /* ② スマホ・タブレット表示時（64em以下）：テーマ標準のボタン開閉（折りたたみ）に戻す */
+  /* ② スマホ・タブレット表示時（64em以下）：ボタンを表示して折りたたみ式にする */
   @media screen and (max-width: 64em) {
     .sidebar .author__urls-wrapper button,
     .sidebar button.author__switcher {
-      display: block !important; /* ボタンを表示する */
+      display: block !important;
     }
   }
 
@@ -193,6 +193,19 @@ document.addEventListener("DOMContentLoaded", () => {
   modal.addEventListener("click", () => {
     modal.classList.remove("active");
   });
+
+  // --- 4. スマホの「Follow」ボタンの文字を「Menu」に変更 ---
+  const changeFollowToMenu = () => {
+    const buttons = document.querySelectorAll(".author__urls-wrapper button, button.author__switcher");
+    buttons.forEach(b => {
+      if (b.innerHTML.includes("Follow")) {
+        b.innerHTML = b.innerHTML.replace("Follow", "Menu");
+      }
+    });
+  };
+  changeFollowToMenu();
+  // 読み込みタイミングのずれ対策
+  setTimeout(changeFollowToMenu, 100);
 });
 </script>
 
