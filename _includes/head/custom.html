@@ -71,26 +71,24 @@
   /* --- 4. レトロRPG風プロフィールリンク --- */
   .author__urls li a {
     display: flex;
-    align-items: center; /* テキストと「▷」を高さ中央にする */
-    background-color: #111111; /* 黒いウィンドウ背景 */
-    border: 2px solid #333333; /* 黒い重厚な枠線 */
+    align-items: center;
+    background-color: #111111;
+    border: 2px solid #333333;
     color: #dddddd !important;
     padding: 8px 12px;
     margin-bottom: 8px;
     text-decoration: none !important;
-    font-family: 'Courier New', Courier, monospace; /* レトロな等幅フォント */
-    box-shadow: 2px 2px 0px #000000; /* ドット絵風の影 */
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: 2px 2px 0px #000000;
     transition: background-color 0.1s, border-color 0.1s;
   }
 
-  /* マウスを乗せたときのスタイル */
   .author__urls li a:hover {
     background-color: #1a1a1a;
-    border-color: #ffcc00; /* ゴールド系の枠 */
+    border-color: #ffcc00;
     color: #ffffff !important;
   }
 
-  /* ▷（矢印）の基本設定 */
   .author__urls li a::before {
     content: "▷ ";
     opacity: 0;
@@ -101,61 +99,64 @@
     transition: opacity 0.2s, width 0.2s;
   }
 
-  /* マウスを乗せたときの「▷」の設定 */
   .author__urls li a:hover::before {
     opacity: 1;
     width: 1.5em;
   }
 
-  /* --- 5. スマホでの常時展開・記事との被り解消（親要素のレイアウト解除版） --- */
-  .sidebar .author__urls-wrapper button,
-  .sidebar button.author__switcher {
-    display: none !important;
-  }
-
-  .sidebar .author__urls-wrapper {
-    display: block !important;
-    max-height: none !important;
-    position: static !important;
-    box-shadow: none !important;
-    background: transparent !important;
-    overflow: visible !important;
-    height: auto !important;
-  }
-
-  .sidebar .author__urls {
-    display: block !important;
-    height: auto !important;
-  }
-
-  /* モバイル・タブレット表示時（64em以下）のレイアウト完全リセット */
+  /* --- 5. スマホでの常時展開 ＆ 完全な上下配置（縦積み） --- */
   @media screen and (max-width: 64em) {
-    /* 親コンテナの横並び（フレックス/グリッド）を解除し、縦積みにする */
-    #main {
+    /* メインコンテンツやサイドバーの回り込み・フレックスを完全に解除し、ブロック積みにする */
+    #main,
+    .initial-content,
+    .page,
+    .layout__item,
+    .archive {
       display: block !important;
-      float: none !important;
       width: 100% !important;
+      float: none !important;
+      position: static !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
       clear: both !important;
     }
 
-    /* サイドバーを完全に独立させ、下に広い余白を確保して記事との被りを防ぐ */
+    /* サイドバーを上に配置し、下に十分な余白を空けて記事との被りを完全に防ぐ */
     .sidebar {
       display: block !important;
-      float: none !important;
       width: 100% !important;
+      float: none !important;
       position: static !important;
-      clear: both !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
       margin-bottom: 3rem !important;
+      padding: 0 !important;
+      clear: both !important;
     }
 
-    /* メインの記事コンテンツを確実に下へ回り込ませる */
-    .initial-content, 
-    .layout__item {
+    /* 開閉ボタンを消去し、プロフィールを常に全開表示にする */
+    .sidebar .author__urls-wrapper button,
+    .sidebar button.author__switcher {
+      display: none !important;
+    }
+
+    .sidebar .author__urls-wrapper {
       display: block !important;
-      float: none !important;
-      width: 100% !important;
-      clear: both !important;
+      max-height: none !important;
       position: static !important;
+      box-shadow: none !important;
+      background: transparent !important;
+      overflow: visible !important;
+      height: auto !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+
+    .sidebar .author__urls {
+      display: block !important;
+      height: auto !important;
     }
   }
 
