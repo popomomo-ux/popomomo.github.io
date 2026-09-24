@@ -214,15 +214,34 @@ document.addEventListener("DOMContentLoaded", () => {
       popup: '<b>シャトレーゼ ガトーキングダム せとうち</b><br><span style="color:#ff4d4f;">シャトレーゼポイントで宿泊したい！</span>' 
     },
     /////// グルメ（gourmet）///////
+    ////滋賀旅行////
      { 
        lat: 35.116698686806814, lng: 136.18397076421496,
        category: 'gourmet', status: 'visited', 
        popup: '<b>近江牛専門店 万葉 太郎坊亭</b><br><span style="color:#52c41a;">近江牛の焼肉ランチ</span>' 
     },
+    ////京都旅行////
     { 
        lat: 34.98667666257747, lng: 135.76128515468568, 
        category: 'gourmet', status: 'visited', 
        popup: '<b>KIZAHASHI</b><br><span style="color:#52c41a;">味も器も天下一品</span>' 
+    },
+    ////香川旅行////
+    { 
+       lat: 34.349957544828925, lng: 134.04730055466248, 
+       category: 'gourmet', status: 'visited', 
+       popup: '<b>めりけんや 高松駅前店</b><br><span style="color:#52c41a;">本場は違うぜ！</span>' 
+    },
+    { 
+       lat: 34.34120738894437, lng: 134.04998443931802, 
+       category: 'gourmet', status: 'visited', 
+       popup: '<b>海鮮問屋 仲見世</b><br><span style="color:#52c41a;">さわらのお刺身には仰天</span>' 
+    },
+    ////三重旅行////
+    { 
+       lat: 34.48921240667204, lng: 136.71041894302834,
+       category: 'gourmet', status: 'visited', 
+       popup: '<b>さかな屋くにちゃん</b><br><span style="color:#52c41a;">とんぼマグロのてこね寿司</span>' 
     },
     /////// 温泉（spa）///////
     // { 
