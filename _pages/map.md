@@ -165,8 +165,8 @@ document.addEventListener("DOMContentLoaded", () => {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
 
-  // --- アイコンを自動生成する関数 ---
-  function createPinIcon(category, status) {
+// --- アイコンを自動生成する関数 ---
+  function createPinIcon(category, status, popup) { // ← ここに popup を追加
     const color = (status === 'want') ? '#ff4d4f' : '#52c41a'; // 行きたい: 赤, 行った: 緑
       
     let iconClass = 'fas fa-map-marker-alt';
