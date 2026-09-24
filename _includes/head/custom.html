@@ -149,6 +149,15 @@
       width: 100% !important;
     }
   }
+  /* --- テーマのJS制御を強制解除する最終手段 --- */
+  .author__urls-wrapper.is-hidden {
+    display: block !important;
+  }
+  .author__urls {
+    display: block !important;
+    visibility: visible !important;
+    max-height: none !important;
+  }
 
   /* --- 6. 埋め込みマップのスタイル調整 --- */
   #blog-map {
