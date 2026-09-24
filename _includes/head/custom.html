@@ -104,42 +104,29 @@
     width: 1.5em;
   }
 
-  /* --- 5. スマホでの常時展開 ＆ 完全な上下配置 --- */
+  /* --- 5. スマホでの常時展開 ＆ 完全な上下分離（被り防止版） --- */
   @media screen and (max-width: 64em) {
-    #main,
-    .initial-content,
-    .page,
-    .layout__item,
-    .archive {
-      display: block !important;
-      width: 100% !important;
-      float: none !important;
-      position: static !important;
-      margin-left: 0 !important;
-      margin-right: 0 !important;
-      clear: both !important;
-    }
-
+    /* サイドバーを上に配置し、下に十分な余白を確保して浮きを防止 */
     .sidebar {
       display: block !important;
       width: 100% !important;
       float: none !important;
-      position: static !important;
-      margin-left: 0 !important;
-      margin-right: 0 !important;
-      margin-bottom: 3.5rem !important; /* 記事との間にしっかりと余白を確保 */
+      position: relative !important;
       clear: both !important;
+      margin-bottom: 3rem !important;
     }
 
+    /* 「Follow」ボタンを完全に非表示にする */
     .sidebar .author__urls-wrapper button,
     .sidebar button.author__switcher {
       display: none !important;
     }
 
+    /* プロフィールリストの制限を完全解除して全開にする */
     .sidebar .author__urls-wrapper {
       display: block !important;
       max-height: none !important;
-      position: static !important;
+      position: relative !important;
       box-shadow: none !important;
       background: transparent !important;
       overflow: visible !important;
@@ -151,6 +138,20 @@
     .sidebar .author__urls {
       display: block !important;
       height: auto !important;
+    }
+
+    /* メインの記事・画像エリアをサイドバーの下に確実に回り込ませる */
+    #main,
+    .initial-content,
+    .page,
+    .layout__item,
+    .archive {
+      display: block !important;
+      width: 100% !important;
+      float: none !important;
+      position: relative !important;
+      clear: both !important;
+      margin-top: 2rem !important;
     }
   }
 
@@ -218,7 +219,7 @@ document.addEventListener("DOMContentLoaded", () => {
     modal.classList.remove("active");
   });
 
-  // --- 4. テーマのJSによるプロフィールの高さ制限（インラインスタイル）を強制解除 ---
+  // --- 4. テーマのJSによる高さを強制解除 ---
   const forceOpenProfile = () => {
     const wrapper = document.querySelector(".author__urls-wrapper");
     if (wrapper) {
@@ -228,7 +229,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
   forceOpenProfile();
-  // 動的にJSが上書きするのを防ぐため、少し遅延してもう一度適用
   setTimeout(forceOpenProfile, 100);
 });
 </script>
