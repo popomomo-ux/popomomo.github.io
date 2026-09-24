@@ -29,7 +29,7 @@ author:
     - label: "ワールドマップ"
       icon: "fas fa-compass"
       url: "/popomomoblog/map/"
-    - label: "クエストボード<br>　（バケットリスト）"
+    - label: "クエストボード<br>（バケットリスト）"
       icon: "fas fa-clipboard-list"
       url: "/popomomoblog/bucket-list/"
     - label: "カテゴリー一覧"
