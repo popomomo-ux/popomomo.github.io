@@ -240,11 +240,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // }
     
    /////// お祭り（festival）///////
-    // { 
-    //   lat: 34.7058, lng: 135.4891, 
-    //   category: 'festival', status: 'visited', 
-    //   popup: '<b>おすすめお祭り</b><br><span style="color:#52c41a;">【行った・お祭り】</span>' 
-    // }
+    { 
+       lat: 36.57737102425911, lng: 137.13575114865438, 
+       category: 'festival', status: 'want', 
+       popup: '<b>おわら風の盆</b><br><span style="color:#52c41a;">【行ってみたい・お祭り】</span>' 
+     }
     
   ];
 
