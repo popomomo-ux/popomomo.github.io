@@ -107,7 +107,7 @@
     width: 1.5em;
   }
 
-  /* --- 5. Minimal Mistakes用：スマホでのプロフィール常時展開＆被り解消 --- */
+  /* --- 5. スマホでの常時展開・記事との被り解消（親要素のレイアウト解除版） --- */
   .sidebar .author__urls-wrapper button,
   .sidebar button.author__switcher {
     display: none !important;
@@ -120,27 +120,42 @@
     box-shadow: none !important;
     background: transparent !important;
     overflow: visible !important;
+    height: auto !important;
   }
 
   .sidebar .author__urls {
     display: block !important;
+    height: auto !important;
   }
 
+  /* モバイル・タブレット表示時（64em以下）のレイアウト完全リセット */
   @media screen and (max-width: 64em) {
-    .sidebar {
+    /* 親コンテナの横並び（フレックス/グリッド）を解除し、縦積みにする */
+    #main {
+      display: block !important;
       float: none !important;
       width: 100% !important;
-      position: relative !important;
       clear: both !important;
-      margin-bottom: 2.5rem !important;
     }
 
+    /* サイドバーを完全に独立させ、下に広い余白を確保して記事との被りを防ぐ */
+    .sidebar {
+      display: block !important;
+      float: none !important;
+      width: 100% !important;
+      position: static !important;
+      clear: both !important;
+      margin-bottom: 3rem !important;
+    }
+
+    /* メインの記事コンテンツを確実に下へ回り込ませる */
     .initial-content, 
-    .layout__item,
-    #main {
+    .layout__item {
+      display: block !important;
       float: none !important;
       width: 100% !important;
       clear: both !important;
+      position: static !important;
     }
   }
 
