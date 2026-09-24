@@ -87,3 +87,16 @@ entries_layout: grid
   font-family: 'Courier New', Courier, monospace;
 }
 </style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // ページ内を走査して "Recent Posts" という文字を探し、RPG風に書き換える
+  document.querySelectorAll('*').forEach(function(el) {
+    el.childNodes.forEach(function(node) {
+      if (node.nodeType === Node.TEXT_NODE && node.nodeValue.includes('Recent Posts')) {
+        node.nodeValue = node.nodeValue.replace('Recent Posts', '📖 冒険の書（最新の記録）');
+      }
+    });
+  });
+});
+</script>
