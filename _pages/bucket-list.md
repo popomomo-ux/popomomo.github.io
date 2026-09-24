@@ -10,8 +10,8 @@ author_profile: true
   <div class="board-header-title" style="display: flex; justify-content: space-between; align-items: center;">
     <span><i class="fas fa-scroll" style="color: #ffcc00;"></i> 討伐クエストボード</span>
     <!-- 常時表示するカウンター（JavaScriptで自動入力されます） -->
-    <span style="font-size: 13px; color: #00ffcc;">
-      討伐済: <strong id="completed-count" style="color: #ffcc00; font-size: 15px;">0</strong> 個
+    <span style="font-size: 20px; color: #00ffcc;">
+      討伐済: <strong id="completed-count" style="color: #ffcc00; font-size: 20px;">0</strong> 個
     </span>
   </div>
 
