@@ -214,9 +214,9 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     /////// 宿（hotel）///////
     { 
-      lat: 34.7058, lng: 135.4891, 
-      category: 'hotel', status: 'visited', 
-      popup: '<b>宿泊したホテル</b><br><span style="color:#52c41a;">【行った・ホテル】</span>' 
+      lat: 34.26270992262492, lng: 132.76163093325016, 
+      category: 'hotel', status: 'want', 
+      popup: '<b>シャトレーゼ ガトーキングダム せとうち</b><br><span style="color:#52c41a;">シャトレーゼポイントで宿泊したい！</span>' 
     },
     /////// グルメ（gourmet）///////
     // { 
