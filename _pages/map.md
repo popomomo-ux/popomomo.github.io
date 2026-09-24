@@ -252,6 +252,11 @@ document.addEventListener("DOMContentLoaded", () => {
        category: 'gourmet', status: 'visited', 
        popup: '<b>松乃家</b><br><span style="color:#52c41a;">味も量も昔懐かしい良い食堂</span>' 
     },
+    { 
+       lat: 35.05568798940034, lng: 135.74850561236036,
+       category: 'gourmet', status: 'visited', 
+       popup: '<b>中華料理 紅華 大宮本店</b><br><span style="color:#52c41a;">味もコスパも最高の町中華</span>' 
+    },
 
     ////香川旅行////
     { 
