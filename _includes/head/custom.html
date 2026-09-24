@@ -127,52 +127,51 @@
     z-index: 1;
   }
 
-  /* --- スマホなどの狭い画面でもプロフィールリンクを常時展開する --- */ 
+  /* --- スマホなどの狭い画面でもプロフィールリンクを常時展開する（完全版） --- */
+  
   /* 1. 「Follow」ボタン自体を非表示にする */
   .author__urls-wrapper button {
     display: none !important;
   }
-  /* 2. 折りたたまれているリンク一覧を常に表示（ブロック表示）にする */
+
+  /* 2. 折りたたまれているリンク一覧を常に表示にする */
   .author__urls {
     display: block !important;
+    height: auto !important;
   }
 
-  /* --- スマホ常時展開時の記事との被りを解消する設定 --- */
+  /* 3. プロフィールボックス全体の高さ制限を完全に解除し、自動拡張させる */
   .author__urls-wrapper {
-    max-height: none !important; /* テーマ側でかけられている高さ制限を解除 */
+    max-height: none !important;
+    height: auto !important;
     overflow: visible !important;
   }
-  .author__urls {
-    display: block !important;
-  }
+
   /* --- スマホ・タブレット表示時（1024px以下）のレイアウト崩れ・被り解消 --- */
   @media screen and (max-width: 1024px) {
-    /* サイドバーのフロートと位置をリセットして独立させる */
+    /* サイドバー自体の領域を完全確保し、高さを自動にする */
     .sidebar {
-      position: relative !important;
+      position: static !important;
       float: none !important;
       width: 100% !important;
+      height: auto !important;
       clear: both !important;
-      margin-top: 1.5rem !important;
-      margin-bottom: 2.5rem !important;
+      margin-bottom: 3rem !important; /* 下部に十分な余白を空けて記事と離す */
     }
 
-    /* メインの記事コンテンツ側のフロートもリセット */
-    .initial-content, 
-    .layout__item {
-      float: none !important;
-      width: 100% !important;
-      clear: both !important;
-    }
-
-    /* プロフィールボックスの制限を完全に解除 */
-    .author__urls-wrapper {
+    /* プロフィール部分のコンテナも高さを確実に解放 */
+    .sidebar .author__urls-wrapper {
+      height: auto !important;
       max-height: none !important;
-      overflow: visible !important;
     }
-    
-    .author__urls {
-      display: block !important;
+
+    /* メインの記事コンテンツ側をサイドバーの下に強制的に回り込ませる */
+    .initial-content, 
+    #main,
+    .layout__item {
+      clear: both !important;
+      float: none !important;
+      width: 100% !important;
     }
   }
 </style>
