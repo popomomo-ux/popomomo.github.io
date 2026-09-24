@@ -145,8 +145,35 @@
   .author__urls {
     display: block !important;
   }
-  .sidebar {
-    margin-bottom: 2.5rem !important; /* サイドバーの下に余白を確保して記事と離す */
+  /* --- スマホ・タブレット表示時（1024px以下）のレイアウト崩れ・被り解消 --- */
+  @media screen and (max-width: 1024px) {
+    /* サイドバーのフロートと位置をリセットして独立させる */
+    .sidebar {
+      position: relative !important;
+      float: none !important;
+      width: 100% !important;
+      clear: both !important;
+      margin-top: 1.5rem !important;
+      margin-bottom: 2.5rem !important;
+    }
+
+    /* メインの記事コンテンツ側のフロートもリセット */
+    .initial-content, 
+    .layout__item {
+      float: none !important;
+      width: 100% !important;
+      clear: both !important;
+    }
+
+    /* プロフィールボックスの制限を完全に解除 */
+    .author__urls-wrapper {
+      max-height: none !important;
+      overflow: visible !important;
+    }
+    
+    .author__urls {
+      display: block !important;
+    }
   }
 </style>
 
