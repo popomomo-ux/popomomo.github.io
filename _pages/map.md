@@ -203,7 +203,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     /////// カフェ（cafe）///////
     { 
-      lat: 34.7026, lng: 135.4947, 
+      lat: 34.67720586538338, lng: 135.83435945467428, 
       category: 'cafe', status: 'visited', 
       popup: '<b>今西清兵衛商店</b><br><span style="color:#ff4d4f;">5種類の利き酒を楽しみ、おちょこもGET</span>' 
     },
