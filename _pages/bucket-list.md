@@ -5,10 +5,14 @@ permalink: /bucket-list/
 author_profile: true
 ---
 
-<div class="rpg-bucket-container">
-  <!-- ボードヘッダータイトル -->
-  <div class="board-header-title">
-    <span><i class="fas fa-scroll" style="color: #ffcc00;"></i> クエストボード <i class="fas fa-scroll" style="color: #ffcc00;"></i></span>
+<div class="rpg-party-container">
+  <!-- クエストボードのタイトルとカウンターを並べる -->
+  <div class="board-header-title" style="display: flex; justify-content: space-between; align-items: center;">
+    <span><i class="fas fa-scroll" style="color: #ffcc00;"></i> 討伐クエストボード</span>
+    <!-- 常時表示するカウンター（JavaScriptで自動入力されます） -->
+    <span style="font-size: 13px; color: #00ffcc;">
+      討伐済: <strong id="completed-count" style="color: #ffcc00; font-size: 15px;">0</strong> 個
+    </span>
   </div>
 
   <!-- タブ切り替えボタン -->
@@ -141,7 +145,7 @@ author_profile: true
 
 
   <!-- ========================================== -->
-  <!-- タブ2：殿堂入り (完了クエスト一覧)       -->
+  <!-- タブ2：完了クエスト一覧（ここを自動集計します） -->
   <!-- ========================================== -->
   <div id="tab-completed" class="rpg-tab-content">
     
@@ -195,7 +199,7 @@ author_profile: true
 
 <style>
 /* レトロRPG風クエストボード＆タブのスタイル */
-.rpg-bucket-container {
+.rpg-party-container {
   font-family: 'Courier New', Courier, monospace;
   color: #f3f3f3;
   background-color: #0d0d1a;
@@ -259,7 +263,7 @@ author_profile: true
   display: block;
 }
 
-/* クエストセクション等（既存のデザインを継承） */
+/* クエストセクション等 */
 .quest-section {
   background-color: #15152b;
   border: 2px solid #444466;
@@ -383,20 +387,28 @@ author_profile: true
 <script>
 /* タブ切り替え用JavaScript関数 */
 function switchTab(evt, tabId) {
-  // すべてのタブコンテンツを非表示にする
   const contents = document.querySelectorAll('.rpg-tab-content');
   contents.forEach(content => {
     content.classList.remove('active-content');
   });
 
-  // すべてのタブボタンのアクティブ状態を解除する
   const buttons = document.querySelectorAll('.rpg-tab-btn');
   buttons.forEach(button => {
     button.classList.remove('active');
   });
 
-  // 指定されたタブコンテンツを表示し、ボタンをアクティブにする
   document.getElementById(tabId).classList.add('active-content');
   evt.currentTarget.classList.add('active');
 }
+
+/* ページ読み込み時に完了クエスト数を自動で数えて表示する処理 */
+document.addEventListener("DOMContentLoaded", function() {
+  // タブ2にある「.completed-list」の中の「li」の数をすべて数える
+  const completedItems = document.querySelectorAll('.completed-list li');
+  const countEl = document.getElementById('completed-count');
+  
+  if (countEl) {
+    countEl.textContent = completedItems.length;
+  }
+});
 </script>
