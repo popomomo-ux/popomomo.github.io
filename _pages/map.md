@@ -262,7 +262,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const matchStatus = (currentStatus === 'all' || loc.status === currentStatus);
 
       if (matchCategory && matchStatus) {
-        const icon = createPinIcon(loc.category, loc.status);
+        const icon = createPinIcon(loc.category, loc.status, loc.popup);
         const marker = L.marker([loc.lat, loc.lng], { icon: icon })
           .addTo(map)
           .bindPopup(loc.popup);
