@@ -32,7 +32,7 @@
 
     {% if post.excerpt %}
       <p class="archive__item-excerpt p-summary" itemprop="description">
-        {{ post.excerpt | markdownify | strip_html | truncate: 80 }}
+        {{ post.excerpt | markdownify | strip_html | truncate: 40 }}
       </p>
     {% endif %}
   </article>
