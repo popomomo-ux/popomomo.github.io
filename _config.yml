@@ -75,3 +75,9 @@ search_provider: "lunr"
 # 作成ページを読み込ませる
 include:
   - "_pages"
+
+# Analytics
+analytics:
+  provider: "google-analytics"
+  google:
+    tracking_id: "G-1PQ3C1HWM3"
