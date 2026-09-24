@@ -201,6 +201,11 @@ document.addEventListener("DOMContentLoaded", () => {
       category: 'spot', status: 'visited', 
       popup: '<b>ジャンボフェリー</b><br><span style="color:#52c41a;">神戸から高松への船旅</span>' 
     },
+    { 
+      lat: 34.33000989198189, lng: 134.04572668164545, 
+      category: 'spot', status: 'visited', 
+      popup: '<b>栗林公園</b><br><span style="color:#52c41a;">スケールが規格外な日本庭園</span>' 
+    },
     /////// カフェ（cafe）///////
     { 
       lat: 34.67720586538338, lng: 135.83435945467428, 
@@ -212,6 +217,11 @@ document.addEventListener("DOMContentLoaded", () => {
       lat: 34.26270992262492, lng: 132.76163093325016, 
       category: 'hotel', status: 'want', 
       popup: '<b>シャトレーゼ ガトーキングダム せとうち</b><br><span style="color:#ff4d4f;">シャトレーゼポイントで宿泊したい！</span>' 
+    },
+    { 
+      lat: 36.34717436720957, lng: 136.36480203753936,
+      category: 'hotel', status: 'want', 
+      popup: '<b>大江戸温泉物語Premium 加賀まるや</b><br><span style="color:#ff4d4f;">直通往復バスで以外と近そう</span>' 
     },
     /////// グルメ（gourmet）///////
     ////大阪旅行////
@@ -225,6 +235,11 @@ document.addEventListener("DOMContentLoaded", () => {
        lat: 35.116698686806814, lng: 136.18397076421496,
        category: 'gourmet', status: 'visited', 
        popup: '<b>近江牛専門店 万葉 太郎坊亭</b><br><span style="color:#52c41a;">近江牛の焼肉ランチ</span>' 
+    },
+    { 
+       lat: 35.38052398005815, lng: 136.26722772771663, 
+       category: 'gourmet', status: 'visited', 
+       popup: '<b>翼果楼（よかろう）</b><br><span style="color:#52c41a;">鯖の旨味で何度でも食べたくなる味。</span>' 
     },
     ////京都旅行////
     { 
