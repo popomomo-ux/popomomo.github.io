@@ -104,9 +104,8 @@
     width: 1.5em;
   }
 
-  /* --- 5. スマホでの常時展開 ＆ 完全な上下配置（縦積み） --- */
+  /* --- 5. スマホでの常時展開 ＆ 完全な上下配置 --- */
   @media screen and (max-width: 64em) {
-    /* メインコンテンツやサイドバーの回り込み・フレックスを完全に解除し、ブロック積みにする */
     #main,
     .initial-content,
     .page,
@@ -118,12 +117,9 @@
       position: static !important;
       margin-left: 0 !important;
       margin-right: 0 !important;
-      padding-left: 0 !important;
-      padding-right: 0 !important;
       clear: both !important;
     }
 
-    /* サイドバーを上に配置し、下に十分な余白を空けて記事との被りを完全に防ぐ */
     .sidebar {
       display: block !important;
       width: 100% !important;
@@ -131,12 +127,10 @@
       position: static !important;
       margin-left: 0 !important;
       margin-right: 0 !important;
-      margin-bottom: 3rem !important;
-      padding: 0 !important;
+      margin-bottom: 3.5rem !important; /* 記事との間にしっかりと余白を確保 */
       clear: both !important;
     }
 
-    /* 開閉ボタンを消去し、プロフィールを常に全開表示にする */
     .sidebar .author__urls-wrapper button,
     .sidebar button.author__switcher {
       display: none !important;
@@ -223,6 +217,19 @@ document.addEventListener("DOMContentLoaded", () => {
   modal.addEventListener("click", () => {
     modal.classList.remove("active");
   });
+
+  // --- 4. テーマのJSによるプロフィールの高さ制限（インラインスタイル）を強制解除 ---
+  const forceOpenProfile = () => {
+    const wrapper = document.querySelector(".author__urls-wrapper");
+    if (wrapper) {
+      wrapper.style.maxHeight = "none";
+      wrapper.style.height = "auto";
+      wrapper.style.overflow = "visible";
+    }
+  };
+  forceOpenProfile();
+  // 動的にJSが上書きするのを防ぐため、少し遅延してもう一度適用
+  setTimeout(forceOpenProfile, 100);
 });
 </script>
 
