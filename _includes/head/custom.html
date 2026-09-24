@@ -89,22 +89,35 @@
     color: #ffffff !important;
   }
 
-  /* ホバー時に左側に「▷」を出現させる設定 */
-  .author__urls li a::before {
-    content: "";
-    display: inline-block;
-    width: 0;
-    overflow: hidden;
-    color: #ffcc00;
-    font-weight: bold;
-  }
+/* 3. ホバー時に左側に「▷」を出現させる設定（修正版） */
+.author__urls li a {
+  /* リンク自体をflexboxにして中身を中央揃えにする */
+  display: flex;
+  align-items: center; /* これでテキストと▷が常に縦中央に並ぶ */
+  /* 以前の padding: 8px 12px; は flex で制御するため不要になります */
+  padding: 8px 12px; /* 上下のパディングはそのまま維持します */
+  /* text-decoration はそのまま */
+}
 
-  .author__urls li a:hover::before {
-    content: "▷ ";
-    width: auto;
-    margin-right: 6px;
-  }
+/* ▷（矢印）の基本設定 */
+.author__urls li a::before {
+  content: "▷ "; /* 通常時からスペースを確保するため、ここに▷を入れておきます */
+  opacity: 0;    /* 通常時は透明にして見えなくする */
+  color: #ffcc00;
+  font-weight: bold;
+  margin-right: 0; /* flexで間隔を調整するため margin は不要 */
+  
+  /* サイズの固定（レイアウトが崩れないようにするため） */
+  width: 0;
+  overflow: hidden;
+  transition: opacity 0.2s, width 0.2s; /* スムーズに表示するアニメーション */
+}
 
+/* マウスを乗せたときの「▷」の設定 */
+.author__urls li a:hover::before {
+  opacity: 1; /* パッと表示する */
+  width: 1.5em; /* ▷の分のスペースを確保（文字が右に押し出される） */
+}
   /* 埋め込みマップのスタイル調整 */
   #blog-map {
     width: 100%;
