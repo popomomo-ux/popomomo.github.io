@@ -161,7 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const map = L.map('blog-map').setView([34.536414, 135.076498], 10);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 17,
+    maxZoom: 15,
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
 
