@@ -104,58 +104,29 @@
     width: 1.5em;
   }
 
-  /* --- 5. スマホでの常時展開 ＆ Flexboxによる完全な上下順序制御 --- */
-  @media screen and (max-width: 64em) {
-    /* 親コンテナを縦方向のFlexboxに変更し、子要素の並び順を完全に制御する */
-    .initial-content {
-      display: flex !important;
-      flex-direction: column !important;
-      width: 100% !important;
-      float: none !important;
-    }
+  /* --- 5. 画面サイズ別の表示切り替え --- */
 
-    /* サイドバーを一番上（order: 1）に固定し、下にしっかり余白を空ける */
-    .sidebar {
-      order: 1 !important;
-      display: block !important;
-      width: 100% !important;
-      float: none !important;
-      position: relative !important;
-      margin-bottom: 2.5rem !important;
-    }
-
-    /* 「Follow」ボタンを非表示にする */
+  /* ① PC（デスクトップ）表示時（64.01em以上）：ボタンを消して常にリンクを展開 */
+  @media screen and (min-width: 64.01em) {
     .sidebar .author__urls-wrapper button,
     .sidebar button.author__switcher {
       display: none !important;
     }
-
-    /* プロフィールリストの高さ制限を完全解除 */
     .sidebar .author__urls-wrapper {
       display: block !important;
       max-height: none !important;
-      height: auto !important;
       overflow: visible !important;
-      position: relative !important;
-      box-shadow: none !important;
-      background: transparent !important;
     }
-
     .sidebar .author__urls {
       display: block !important;
-      height: auto !important;
     }
+  }
 
-    /* メインの記事・画像エリアを必ず下（order: 2）に配置する */
-    .initial-content > .page,
-    .initial-content > .archive,
-    .initial-content > #main,
-    .initial-content > .layout__item {
-      order: 2 !important;
-      display: block !important;
-      width: 100% !important;
-      float: none !important;
-      position: relative !important;
+  /* ② スマホ・タブレット表示時（64em以下）：テーマ標準のボタン開閉（折りたたみ）に戻す */
+  @media screen and (max-width: 64em) {
+    .sidebar .author__urls-wrapper button,
+    .sidebar button.author__switcher {
+      display: block !important; /* ボタンを表示する */
     }
   }
 
@@ -222,18 +193,6 @@ document.addEventListener("DOMContentLoaded", () => {
   modal.addEventListener("click", () => {
     modal.classList.remove("active");
   });
-
-  // --- 4. テーマのJSによる高さを強制解除 ---
-  const forceOpenProfile = () => {
-    const wrapper = document.querySelector(".author__urls-wrapper");
-    if (wrapper) {
-      wrapper.style.maxHeight = "none";
-      wrapper.style.height = "auto";
-      wrapper.style.overflow = "visible";
-    }
-  };
-  forceOpenProfile();
-  setTimeout(forceOpenProfile, 100);
 });
 </script>
 
