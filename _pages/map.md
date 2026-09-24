@@ -247,6 +247,12 @@ document.addEventListener("DOMContentLoaded", () => {
        category: 'gourmet', status: 'visited', 
        popup: '<b>KIZAHASHI</b><br><span style="color:#52c41a;">味も器も天下一品</span>' 
     },
+    { 
+       lat: 35.030846536661066, lng: 135.75794097981836,
+       category: 'gourmet', status: 'visited', 
+       popup: '<b>松乃家</b><br><span style="color:#52c41a;">味も量も昔懐かしい良い食堂</span>' 
+    },
+
     ////香川旅行////
     { 
        lat: 34.349957544828925, lng: 134.04730055466248, 
