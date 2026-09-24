@@ -202,6 +202,12 @@ document.addEventListener("DOMContentLoaded", () => {
       popup: '<b>ジャンボフェリー</b><br><span style="color:#52c41a;">神戸から高松への船旅</span>' 
     },
     { 
+      lat: 34.48173281861081, lng: 136.84561749514268,
+      category: 'spot', status: 'visited', 
+      popup: '<b>鳥羽水族館</b><br><span style="color:#52c41a;">念願のラッコとの邂逅</span>' 
+    },
+
+    { 
       lat: 34.33000989198189, lng: 134.04572668164545, 
       category: 'spot', status: 'visited', 
       popup: '<b>栗林公園</b><br><span style="color:#52c41a;">スケールが規格外な日本庭園</span>' 
