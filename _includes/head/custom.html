@@ -126,6 +126,16 @@
     margin: 20px 0;
     z-index: 1;
   }
+
+  /* --- スマホなどの狭い画面でもプロフィールリンクを常時展開する --- */ 
+  /* 1. 「Follow」ボタン自体を非表示にする */
+  .author__urls-wrapper button {
+    display: none !important;
+  }
+  /* 2. 折りたたまれているリンク一覧を常に表示（ブロック表示）にする */
+  .author__urls {
+    display: block !important;
+  }
 </style>
 
 <script>
