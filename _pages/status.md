@@ -83,7 +83,7 @@ author_profile: true
         <table class="rpg-equipment-table">
           <tr>
             <th><i class="fas fa-magic"></i> 武器（メインクレカ）</th>
-            <td>三井住友ゴールドカード <span>(ATK +50)</span></td>
+            <td>某ゴールドカード <span>(ATK +50)</span></td>
           </tr>
           <tr>
             <th><i class="fas fa-tshirt"></i> 防具（メインバンク）</th>
