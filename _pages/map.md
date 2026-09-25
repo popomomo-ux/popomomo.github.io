@@ -293,11 +293,11 @@ document.addEventListener("DOMContentLoaded", () => {
        popup: '<b>さわやか 浜松遠鉄店</b><br><span style="color:#ff4d4f;">噂に名高いハンバーグ食べたいね</span>' 
     },  
     /////// 温泉（spa）///////
-    // { 
-    //   lat: 34.7058, lng: 135.4891, 
-    //   category: 'spa', status: 'visited', 
-    //   popup: '<b>おすすめ温泉</b><br><span style="color:#52c41a;">【行った・温泉】</span>' 
-    // }
+    { 
+       lat: 35.17874811246188, lng: 136.97932715284028,
+       category: 'spa', status: 'want', 
+       popup: '<b>RAKU SPA GARDEN 名古屋</b><br><span style="color:#ff4d4f;">名古屋周辺の大型スーパー銭湯</span>' 
+     },
     
    /////// 神社・お寺（temple）///////
     { 
