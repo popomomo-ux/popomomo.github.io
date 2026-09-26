@@ -49,7 +49,7 @@ author_profile: true
 }
 
 .ff-chart-container {
-  background-color: #000000;
+  background-color: #15152b;
   padding: 15px;
   border: 1px solid #222222;
   border-radius: 2px;
