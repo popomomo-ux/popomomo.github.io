@@ -64,7 +64,7 @@ author_profile: true
 const adventureData = {
   labels: ['2026', '2027', '2028', '2029', '2030'], // 年ごとのラベル
   points: [100000, , , ],         // 総ポイント数
-  quests: [0, , , ]                   // クエスト達成数
+  quests: [5, , , ]                   // クエスト達成数
 };
 
 document.addEventListener("DOMContentLoaded", function() {
