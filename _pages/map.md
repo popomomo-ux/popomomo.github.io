@@ -232,7 +232,7 @@ document.addEventListener("DOMContentLoaded", () => {
     { 
       lat: 36.34717436720957, lng: 136.36480203753936,
       category: 'hotel', status: 'want', 
-      popup: '<b>大江戸温泉物語Premium 加賀まるや</b><br><span style="color:#ff4d4f;">直通往復バスで意外と近そう</span>' 
+      popup: '<b>大江戸温泉物語Premium 加賀まるや</b><br><span style="color:#ff4d4f;">直通往復バスで意外と近そう</span><br><a href="https://www.ooedoonsen.jp/kagamaruya/" target="_blank">▶ 公式ホームページ</a>' 
     },
     /////// グルメ（gourmet）///////
     ////大阪旅行////
