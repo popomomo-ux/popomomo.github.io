@@ -298,7 +298,11 @@ document.addEventListener("DOMContentLoaded", () => {
        category: 'spa', status: 'want', 
        popup: '<b>RAKU SPA GARDEN 名古屋</b><br><span style="color:#ff4d4f;">名古屋周辺の大型スーパー銭湯</span><br><a href="https://rakuspa.com/nagoya/" target="_blank">▶ 公式ホームページ</a>' 
      },
-    
+     { 
+       lat: 33.852149147516016, lng: 132.78640614461185, 
+       category: 'spa', status: 'want', 
+       popup: '<b>道後温泉</b><br><span style="color:#ff4d4f;">約3,000年の歴史を持つ、日本最古級の温泉</span><br><a href="https://dogo.jp/about" target="_blank">▶ 公式ホームページ</a>' 
+     },
    /////// 神社・お寺（temple）///////
     { 
        lat: 34.68166881964122, lng: 135.8484718796952, 
