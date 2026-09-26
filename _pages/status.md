@@ -100,6 +100,7 @@ author_profile: true
           <tr>
             <th><i class="fas fa-box"></i> 所持品</th>
             <td>世帯主の大葉（家庭菜園） <span>(HP回復・栽培中)</span></td>
+            <td>シャトレーゼ会員カード<span>(無料宿泊の可能性が封印されている)</span></td>****
           </tr>
         </table>
       </div>
@@ -127,15 +128,23 @@ author_profile: true
         <table class="rpg-equipment-table">
           <tr>
             <th><i class="fas fa-magic"></i> 武器</th>
-            <td>トラベルガイドブック <span>(ATK +30)</span></td>
+            <td>フライパンブレード <span>(ATK +30)</span></td>
           </tr>
           <tr>
             <th><i class="fas fa-tshirt"></i> 防具</th>
-            <td>お気に入りのスニーカー <span>(AGI +50)</span></td>
+            <td>ホーリーエプロン <span>(AGI +50)</span></td>
+          </tr>
+          <tr>
+            <th><i class="fas fa-shield-alt"></i> 盾</th>
+            <td>まな板の盾 <span>(DEF +40)</span></td>
           </tr>
           <tr>
             <th><i class="fas fa-ring"></i> 装飾品</th>
-            <td>マイレージカード <span>(LUCK +80)</span></td>
+            <td>家庭円満のペンダント <span>(LUCK +80)</span></td>
+          </tr>
+          <tr>
+            <th><i class="fas fa-box"></i> 所持品</th>
+            <td>みょうがの芽（家庭菜園） <span>(MP回復・栽培中)</span></td>
           </tr>
         </table>
       </div>
