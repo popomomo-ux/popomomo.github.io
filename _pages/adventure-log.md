@@ -10,7 +10,7 @@ author_profile: true
 
 <div class="ff-status-window">
   <div class="ff-title">▼ ぼうけんのきろく ―― 年次戦果レポート ――</div>
-  <p class="ff-text">これまでの旅の足あと、総ポイント数、およびバケットリストの達成数の年ごとの推移じゃ。</p>
+  <p class="ff-text">旅の足あと：総ポイント数、およびクエスト達成数の年ごとの推移。</p>
 
   <!-- グラフ表示エリア -->
   <div class="ff-chart-container">
@@ -62,9 +62,9 @@ author_profile: true
 <script>
 // 2027年以降、毎年1月にこちらの数値を書き換えてください
 const adventureData = {
-  labels: ['2027', '2028', '2029', '2030'], // 年ごとのラベル
-  points: [1200, 2800, 4500, 6200],         // 総ポイント数
-  quests: [15, 34, 52, 70]                   // クエスト達成数
+  labels: ['2026', '2027', '2028', '2029', '2030'], // 年ごとのラベル
+  points: [100000, , , ],         // 総ポイント数
+  quests: [0, , , ]                   // クエスト達成数
 };
 
 document.addEventListener("DOMContentLoaded", function() {
