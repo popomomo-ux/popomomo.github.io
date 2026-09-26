@@ -181,7 +181,7 @@ document.addEventListener("DOMContentLoaded", () => {
     else if (category === 'cafe') iconClass = 'fas fa-coffee';
     else if (category === 'hotel') iconClass = 'fas fa-bed';
     else if (category === 'gourmet') iconClass = 'fas fa-utensils';
-    else if (category === 'spa') iconClass = 'fas fa-hot-tub';
+    else if (category === 'spa') iconClass = 'fas fa-hot-springs';
     else if (category === 'temple') iconClass = 'fas fa-torii-gate';
     else if (category === 'festival') iconClass = 'fas fa-drum';
 
