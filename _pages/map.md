@@ -209,7 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
     { 
       lat: 26.445519309491356, lng: 127.7455738340109, 
       category: 'spot', status: 'want', 
-      popup: '<b>やちむんの里</b><br><span style="color:#ff4d4f;">器好きの妻の憧れの地</span>' 
+      popup: '<b>やちむんの里</b><br><span style="color:#ff4d4f;">器好きの妻の憧れの地</span><br><a href="https://www.yomitan-kankou.jp/tourist/watch/1611319504/" target="_blank">▶ 参考サイト</a>' 
     },
 
     { 
@@ -227,7 +227,7 @@ document.addEventListener("DOMContentLoaded", () => {
     { 
       lat: 34.26270992262492, lng: 132.76163093325016, 
       category: 'hotel', status: 'want', 
-      popup: '<b>シャトレーゼ ガトーキングダム せとうち</b><br><span style="color:#ff4d4f;">シャトレーゼポイントで宿泊したい！</span>' 
+      popup: '<b>シャトレーゼ ガトーキングダム せとうち</b><br><span style="color:#ff4d4f;">シャトレーゼポイントで宿泊したい！</span><br><a href="https://setouchi.gateauxkingdom.com/" target="_blank">▶ 公式ホームページ</a>' 
     },
     { 
       lat: 36.34717436720957, lng: 136.36480203753936,
@@ -290,13 +290,13 @@ document.addEventListener("DOMContentLoaded", () => {
     { 
        lat: 34.70586385200359, lng: 137.73413920129764,
        category: 'gourmet', status: 'want', 
-       popup: '<b>さわやか 浜松遠鉄店</b><br><span style="color:#ff4d4f;">噂に名高いハンバーグ食べたいね</span>' 
+       popup: '<b>さわやか 浜松遠鉄店</b><br><span style="color:#ff4d4f;">噂に名高いハンバーグ食べたいね</span><br><a href="https://www.genkotsu-hb.com/" target="_blank">▶ 公式ホームページ</a>' 
     },  
     /////// 温泉（spa）///////
     { 
        lat: 35.17874811246188, lng: 136.97932715284028,
        category: 'spa', status: 'want', 
-       popup: '<b>RAKU SPA GARDEN 名古屋</b><br><span style="color:#ff4d4f;">名古屋周辺の大型スーパー銭湯</span>' 
+       popup: '<b>RAKU SPA GARDEN 名古屋</b><br><span style="color:#ff4d4f;">名古屋周辺の大型スーパー銭湯</span><br><a href="https://rakuspa.com/nagoya/" target="_blank">▶ 公式ホームページ</a>' 
      },
     
    /////// 神社・お寺（temple）///////
@@ -314,7 +314,7 @@ document.addEventListener("DOMContentLoaded", () => {
     { 
        lat: 36.57737102425911, lng: 137.13575114865438, 
        category: 'festival', status: 'want', 
-       popup: '<b>おわら風の盆</b><br><span style="color:#ff4d4f;">WESTERポイントで行けるかな？</span>' 
+       popup: '<b>おわら風の盆</b><br><span style="color:#ff4d4f;">WESTERポイントで行けるかな？</span><br><a href="https://owara-gyoujiunei.com/" target="_blank">▶ 公式ホームページ</a>' 
     }
     
   ];
