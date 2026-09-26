@@ -32,7 +32,7 @@ author:
     - label: "クエストボード<br>（バケットリスト）"
       icon: "fas fa-clipboard-list"
       url: "/popomomoblog/bucket-list/"
-    - label: "セーブポイント<br>（クエストとポイントの軌跡）"
+    - label: "セーブポイント<br>（クエストと移）"
       icon: "fas fa-church"
       url: "/popomomoblog/adventure-log/"
     - label: "カテゴリー一覧"
