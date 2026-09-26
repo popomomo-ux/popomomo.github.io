@@ -8,49 +8,51 @@ author_profile: true
 <!-- Chart.jsの読み込み -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<div class="dq-status-window">
-  <div class="dq-title">▼ ぼうけんのきろく ―― 年次戦果レポート ――</div>
-  <p class="dq-text">これまでの旅の足あと、総ポイント数、およびバケットリストの達成数の年ごとの推移じゃ。</p>
+<div class="ff-status-window">
+  <div class="ff-title">▼ ぼうけんのきろく ―― 年次戦果レポート ――</div>
+  <p class="ff-text">これまでの旅の足あと、総ポイント数、およびバケットリストの達成数の年ごとの推移じゃ。</p>
 
   <!-- グラフ表示エリア -->
-  <div class="dq-chart-container">
+  <div class="ff-chart-container">
     <canvas id="adventureChart"></canvas>
   </div>
 </div>
 
 <style>
-/* ドラクエ風レトロウィンドウのスタイル */
-.dq-status-window {
-  background-color: #0000aa; /* ドラクエ風の深い青 */
-  border: 4px solid #ffffff; /* 白い二重線風の太枠 */
-  box-shadow: 0 0 0 4px #0000aa, inset 0 0 0 4px #0000aa;
+/* スーファミFF風ダークウィンドウのスタイル */
+.ff-status-window {
+  background-color: #0b0b0b; /* 漆黒の背景 */
+  border: 2px solid #ffffff; /* シャープな白い枠線 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8), inset 0 0 15px rgba(255, 255, 255, 0.03);
   color: #ffffff;
   padding: 20px;
   margin: 20px 0;
   font-family: 'Courier New', Courier, Monaco, monospace;
-  border-radius: 4px;
+  border-radius: 2px;
 }
 
-.dq-title {
+.ff-title {
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 15px;
-  border-bottom: 2px dashed #ffffff;
+  border-bottom: 1px solid #333333;
   padding-bottom: 8px;
   letter-spacing: 1px;
+  color: #f0f0f0;
 }
 
-.dq-text {
+.ff-text {
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 20px;
+  color: #cccccc;
 }
 
-.dq-chart-container {
-  background-color: #000066;
+.ff-chart-container {
+  background-color: #000000;
   padding: 15px;
-  border: 2px solid #ffffff;
-  border-radius: 4px;
+  border: 1px solid #222222;
+  border-radius: 2px;
   position: relative;
   height: 350px;
   width: 100%;
@@ -66,7 +68,6 @@ const adventureData = {
 };
 
 document.addEventListener("DOMContentLoaded", function() {
-  const ctx = document.getElementById('adventureChart').getContext('27');
   const ctxReal = document.getElementById('adventureChart').getContext('2d');
   
   new Chart(ctxReal, {
@@ -77,21 +78,21 @@ document.addEventListener("DOMContentLoaded", function() {
         {
           label: '総ポイント数 (P)',
           data: adventureData.points,
-          borderColor: '#ffcc00', // ドラクエ風ゴールド
-          backgroundColor: '#ffcc00',
-          borderWidth: 3,
-          pointRadius: 5,
-          pointHoverRadius: 7,
+          borderColor: '#ffdd00', // FF風の引き締まったゴールド
+          backgroundColor: '#ffdd00',
+          borderWidth: 2,
+          pointRadius: 4,
+          pointHoverRadius: 6,
           yAxisID: 'y',
         },
         {
           label: 'クエスト達成数 (件)',
           data: adventureData.quests,
-          borderColor: '#52c41a', // ドラクエ風グリーン
-          backgroundColor: '#52c41a',
-          borderWidth: 3,
-          pointRadius: 5,
-          pointHoverRadius: 7,
+          borderColor: '#00ffcc', // FF風のサイバーシアン
+          backgroundColor: '#00ffcc',
+          borderWidth: 2,
+          pointRadius: 4,
+          pointHoverRadius: 6,
           yAxisID: 'y1',
         }
       ]
@@ -115,8 +116,8 @@ document.addEventListener("DOMContentLoaded", function() {
           }
         },
         tooltip: {
-          backgroundColor: 'rgba(0, 0, 170, 0.9)',
-          titleColor: '#ffcc00',
+          backgroundColor: 'rgba(10, 10, 10, 0.95)',
+          titleColor: '#ffdd00',
           bodyColor: '#ffffff',
           borderColor: '#ffffff',
           borderWidth: 1,
@@ -139,10 +140,10 @@ document.addEventListener("DOMContentLoaded", function() {
       scales: {
         x: {
           grid: {
-            color: 'rgba(255, 255, 255, 0.15)'
+            color: 'rgba(255, 255, 255, 0.08)'
           },
           ticks: {
-            color: '#ffffff',
+            color: '#cccccc',
             font: {
               family: 'Courier New, monospace',
               weight: 'bold'
@@ -156,14 +157,14 @@ document.addEventListener("DOMContentLoaded", function() {
           title: {
             display: true,
             text: 'ポイント (P)',
-            color: '#ffcc00',
+            color: '#ffdd00',
             font: { weight: 'bold' }
           },
           grid: {
-            color: 'rgba(255, 255, 255, 0.15)'
+            color: 'rgba(255, 255, 255, 0.08)'
           },
           ticks: {
-            color: '#ffcc00'
+            color: '#ffdd00'
           }
         },
         y1: {
@@ -173,15 +174,15 @@ document.addEventListener("DOMContentLoaded", function() {
           title: {
             display: true,
             text: 'クエスト数 (件)',
-            color: '#52c41a',
+            color: '#00ffcc',
             font: { weight: 'bold' }
           },
           grid: {
-            drawOnChartArea: false, // グリッド線の重複を防ぐ
-            color: 'rgba(255, 255, 255, 0.15)'
+            drawOnChartArea: false,
+            color: 'rgba(255, 255, 255, 0.08)'
           },
           ticks: {
-            color: '#52c41a'
+            color: '#00ffcc'
           }
         }
       }
