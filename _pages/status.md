@@ -34,42 +34,42 @@ author_profile: true
         <!-- 6大魔石グリッド -->
         <h4 class="rpg-section-title"><i class="fas fa-gem"></i> 6大魔石（保有ポイント収蔵庫）</h4>
         <div class="rpg-stone-grid">
-          <div class="rpg-stone-card" data-points="15000">
+          <div class="rpg-stone-card" data-points="41000">
             <div class="stone-icon">💎</div>
             <div class="stone-info">
               <div class="stone-name">Vポイント</div>
               <div class="stone-value">41,000 Pt</div>
             </div>
           </div>
-          <div class="rpg-stone-card" data-points="8400">
+          <div class="rpg-stone-card" data-points="49000">
             <div class="stone-icon">🔥</div>
             <div class="stone-info">
               <div class="stone-name">PayPayポイント</div>
               <div class="stone-value">49,000 Pt</div>
             </div>
           </div>
-          <div class="rpg-stone-card" data-points="12000">
+          <div class="rpg-stone-card" data-points="184000">
             <div class="stone-icon">✨</div>
             <div class="stone-info">
               <div class="stone-name">Pontaポイント</div>
               <div class="stone-value">184,000 Pt</div>
             </div>
           </div>
-          <div class="rpg-stone-card" data-points="6500">
+          <div class="rpg-stone-card" data-points="500">
             <div class="stone-icon">🌟</div>
             <div class="stone-info">
               <div class="stone-name">楽天ポイント</div>
               <div class="stone-value">500 Pt</div>
             </div>
           </div>
-          <div class="rpg-stone-card" data-points="9300">
+          <div class="rpg-stone-card" data-points="100">
             <div class="stone-icon">🌀</div>
             <div class="stone-info">
               <div class="stone-name">dポイント</div>
               <div class="stone-value">100 Pt</div>
             </div>
           </div>
-          <div class="rpg-stone-card" data-points="5000">
+          <div class="rpg-stone-card" data-points="1000">
             <div class="stone-icon">🔮</div>
             <div class="stone-info">
               <div class="stone-name">Microsoftポイント（1/10）</div>
