@@ -10,7 +10,7 @@ author_profile: true
 
 <div class="ff-status-window">
   <div class="ff-title">▼ ぼうけんのきろく ―― 年次戦果レポート ――</div>
-  <p class="ff-text">旅の足あと：<br>総ポイント数、およびクエスト達成数の年ごとの推移</p>
+  <p class="ff-text">旅の足あと：<br>クエスト達成数、および総ポイント数の年ごとの推移</p>
 
   <!-- グラフ表示エリア -->
   <div class="ff-chart-container">
