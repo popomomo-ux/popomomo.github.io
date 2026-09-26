@@ -1,0 +1,190 @@
+---
+layout: single
+title: "クエスト達成数と総ポイントの推移"
+permalink: /adventure-log/
+---
+
+<!-- Chart.jsの読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<div class="dq-status-window">
+  <div class="dq-title">▼ ぼうけんのきろく ―― 年次戦果レポート ――</div>
+  <p class="dq-text">これまでの旅の足あと、総ポイント数、およびバケットリストの達成数の年ごとの推移じゃ。</p>
+
+  <!-- グラフ表示エリア -->
+  <div class="dq-chart-container">
+    <canvas id="adventureChart"></canvas>
+  </div>
+</div>
+
+<style>
+/* ドラクエ風レトロウィンドウのスタイル */
+.dq-status-window {
+  background-color: #0000aa; /* ドラクエ風の深い青 */
+  border: 4px solid #ffffff; /* 白い二重線風の太枠 */
+  box-shadow: 0 0 0 4px #0000aa, inset 0 0 0 4px #0000aa;
+  color: #ffffff;
+  padding: 20px;
+  margin: 20px 0;
+  font-family: 'Courier New', Courier, Monaco, monospace;
+  border-radius: 4px;
+}
+
+.dq-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  border-bottom: 2px dashed #ffffff;
+  padding-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.dq-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.dq-chart-container {
+  background-color: #000066;
+  padding: 15px;
+  border: 2px solid #ffffff;
+  border-radius: 4px;
+  position: relative;
+  height: 350px;
+  width: 100%;
+}
+</style>
+
+<script>
+// 2027年以降、毎年1月にこちらの数値を書き換えてください
+const adventureData = {
+  labels: ['2027', '2028', '2029', '2030'], // 年ごとのラベル
+  points: [1200, 2800, 4500, 6200],         // 総ポイント数
+  quests: [15, 34, 52, 70]                   // クエスト達成数
+};
+
+document.addEventListener("DOMContentLoaded", function() {
+  const ctx = document.getElementById('adventureChart').getContext('27');
+  const ctxReal = document.getElementById('adventureChart').getContext('2d');
+  
+  new Chart(ctxReal, {
+    type: 'line',
+    data: {
+      labels: adventureData.labels,
+      datasets: [
+        {
+          label: '総ポイント数 (P)',
+          data: adventureData.points,
+          borderColor: '#ffcc00', // ドラクエ風ゴールド
+          backgroundColor: '#ffcc00',
+          borderWidth: 3,
+          pointRadius: 5,
+          pointHoverRadius: 7,
+          yAxisID: 'y',
+        },
+        {
+          label: 'クエスト達成数 (件)',
+          data: adventureData.quests,
+          borderColor: '#52c41a', // ドラクエ風グリーン
+          backgroundColor: '#52c41a',
+          borderWidth: 3,
+          pointRadius: 5,
+          pointHoverRadius: 7,
+          yAxisID: 'y1',
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: {
+        mode: 'index',
+        intersect: false,
+      },
+      plugins: {
+        legend: {
+          labels: {
+            color: '#ffffff',
+            font: {
+              family: 'Courier New, monospace',
+              size: 12,
+              weight: 'bold'
+            }
+          }
+        },
+        tooltip: {
+          backgroundColor: 'rgba(0, 0, 170, 0.9)',
+          titleColor: '#ffcc00',
+          bodyColor: '#ffffff',
+          borderColor: '#ffffff',
+          borderWidth: 1,
+          padding: 10,
+          boxPadding: 4,
+          callbacks: {
+            label: function(context) {
+              let label = context.dataset.label || '';
+              if (label) {
+                label += ': ';
+              }
+              if (context.parsed.y !== null) {
+                label += context.parsed.y;
+              }
+              return label;
+            }
+          }
+        }
+      },
+      scales: {
+        x: {
+          grid: {
+            color: 'rgba(255, 255, 255, 0.15)'
+          },
+          ticks: {
+            color: '#ffffff',
+            font: {
+              family: 'Courier New, monospace',
+              weight: 'bold'
+            }
+          }
+        },
+        y: {
+          type: 'linear',
+          display: true,
+          position: 'left',
+          title: {
+            display: true,
+            text: 'ポイント (P)',
+            color: '#ffcc00',
+            font: { weight: 'bold' }
+          },
+          grid: {
+            color: 'rgba(255, 255, 255, 0.15)'
+          },
+          ticks: {
+            color: '#ffcc00'
+          }
+        },
+        y1: {
+          type: 'linear',
+          display: true,
+          position: 'right',
+          title: {
+            display: true,
+            text: 'クエスト数 (件)',
+            color: '#52c41a',
+            font: { weight: 'bold' }
+          },
+          grid: {
+            drawOnChartArea: false, // グリッド線の重複を防ぐ
+            color: 'rgba(255, 255, 255, 0.15)'
+          },
+          ticks: {
+            color: '#52c41a'
+          }
+        }
+      }
+    }
+  });
+});
+</script>
