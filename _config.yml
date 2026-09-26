@@ -33,7 +33,7 @@ author:
       icon: "fas fa-clipboard-list"
       url: "/popomomoblog/bucket-list/"
     - label: "セーブポイント<br>（これまでの軌跡とポイント）"
-      icon: "fas fa-place-of-worship"
+      icon: "fas fa-church"
       url: "/popomomoblog/adventure-log/"
     - label: "カテゴリー一覧"
       icon: "fas fa-fw fa-folder-open"
