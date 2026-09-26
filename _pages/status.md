@@ -38,35 +38,35 @@ author_profile: true
             <div class="stone-icon">💎</div>
             <div class="stone-info">
               <div class="stone-name">Vポイント</div>
-              <div class="stone-value">15,000 Pt</div>
+              <div class="stone-value">41,000 Pt</div>
             </div>
           </div>
           <div class="rpg-stone-card" data-points="8400">
             <div class="stone-icon">🔥</div>
             <div class="stone-info">
               <div class="stone-name">PayPayポイント</div>
-              <div class="stone-value">8,400 Pt</div>
+              <div class="stone-value">49,000 Pt</div>
             </div>
           </div>
           <div class="rpg-stone-card" data-points="12000">
             <div class="stone-icon">✨</div>
             <div class="stone-info">
               <div class="stone-name">Pontaポイント</div>
-              <div class="stone-value">12,000 Pt</div>
+              <div class="stone-value">184,000 Pt</div>
             </div>
           </div>
           <div class="rpg-stone-card" data-points="6500">
             <div class="stone-icon">🌟</div>
             <div class="stone-info">
               <div class="stone-name">楽天ポイント</div>
-              <div class="stone-value">100 Pt</div>
+              <div class="stone-value">500 Pt</div>
             </div>
           </div>
           <div class="rpg-stone-card" data-points="9300">
             <div class="stone-icon">🌀</div>
             <div class="stone-info">
               <div class="stone-name">dポイント</div>
-              <div class="stone-value">9,300 Pt</div>
+              <div class="stone-value">100 Pt</div>
             </div>
           </div>
           <div class="rpg-stone-card" data-points="5000">
