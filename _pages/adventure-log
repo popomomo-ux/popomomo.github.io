@@ -2,6 +2,7 @@
 layout: single
 title: "クエスト達成数と総ポイントの推移"
 permalink: /adventure-log/
+author_profile: true
 ---
 
 <!-- Chart.jsの読み込み -->
